@@ -20,7 +20,7 @@ webphoto_include_once( 'class/admin/file_table_manage.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_admin_file_table_manage::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_admin_file_table_manage::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manage->main();
 
 exit();

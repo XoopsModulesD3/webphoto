@@ -532,7 +532,7 @@ function _build_form_modify( $flag_default=true )
 
 function _build_preview_modify( $item_row )
 {
-	$show_class =& webphoto_show_photo::getInstance( 
+	$show_class = webphoto_show_photo::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	$arr = array(

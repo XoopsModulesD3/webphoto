@@ -40,7 +40,7 @@ webphoto_include_once( 'class/admin/giconmanager.php' );
 //=========================================================
 // main
 //=========================================================
-$manager =& webphoto_admin_giconmanager::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manager = webphoto_admin_giconmanager::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manager->main();
 exit();
 

@@ -41,10 +41,10 @@ function webphoto_edit_base( $dirname, $trust_dirname )
 	$this->webphoto_base_this( $dirname, $trust_dirname );
 
 	$this->_item_create_class  
-		=& webphoto_edit_item_create::getInstance( $dirname , $trust_dirname  );
+		= webphoto_edit_item_create::getInstance( $dirname , $trust_dirname  );
 	$this->_mime_class 
-		=& webphoto_mime::getInstance( $dirname, $trust_dirname );
-	$this->_icon_build_class =& webphoto_edit_icon_build::getInstance( $dirname );
+		= webphoto_mime::getInstance( $dirname, $trust_dirname );
+	$this->_icon_build_class = webphoto_edit_icon_build::getInstance( $dirname );
 }
 
 //---------------------------------------------------------

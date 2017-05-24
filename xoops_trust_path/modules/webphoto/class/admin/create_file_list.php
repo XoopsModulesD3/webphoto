@@ -22,7 +22,7 @@ function webphoto_admin_create_file_list( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_file_class =& webphoto_lib_file_check::getInstance(
+	$this->_file_class = webphoto_lib_file_check::getInstance(
 		$dirname , $trust_dirname );
 }
 

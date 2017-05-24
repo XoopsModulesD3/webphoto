@@ -60,11 +60,11 @@ function webphoto_main_gmap_location( $dirname , $trust_dirname )
 
 	$this->_TEMPLATE = 'db:'. $dirname .'_main_gmap_location.html';
 
-	$this->_gmap_class      =& webphoto_gmap::getInstance( 
+	$this->_gmap_class      = webphoto_gmap::getInstance( 
 		$dirname , $trust_dirname );
-	$this->_public_class    =& webphoto_photo_public::getInstance( 
+	$this->_public_class    = webphoto_photo_public::getInstance( 
 		$dirname, $trust_dirname  );
-	$this->_multibyte_class =& webphoto_lib_multibyte::getInstance();
+	$this->_multibyte_class = webphoto_lib_multibyte::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

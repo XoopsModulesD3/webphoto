@@ -24,9 +24,9 @@ function webphoto_ext_jpg( $dirname, $trust_dirname )
 {
 	$this->webphoto_ext_base( $dirname, $trust_dirname );
 
-	$this->_imagemagick_class =& webphoto_imagemagick::getInstance( $dirname, $trust_dirname );
-	$this->_image_create_class =& webphoto_image_create::getInstance( $dirname );
-	$this->_exif_class =& webphoto_exif::getInstance();
+	$this->_imagemagick_class = webphoto_imagemagick::getInstance( $dirname, $trust_dirname );
+	$this->_image_create_class = webphoto_image_create::getInstance( $dirname );
+	$this->_exif_class = webphoto_exif::getInstance();
 
 	$this->set_debug_by_name( 'JPG' );
 }

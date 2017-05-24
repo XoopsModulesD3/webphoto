@@ -55,7 +55,7 @@ function webphoto_admin_mimetypes( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_mime_handler =& webphoto_mime_handler::getInstance( 
+	$this->_mime_handler = webphoto_mime_handler::getInstance( 
 		$dirname , $trust_dirname );
 
 	$this->_xoops_group_objs = $this->get_xoops_group_objs();
@@ -400,7 +400,7 @@ function _print_list()
 	echo "</table>\n ";
 // --- table end ---
 
-	$pagenavi_class =& webphoto_lib_pagenavi::getInstance();
+	$pagenavi_class = webphoto_lib_pagenavi::getInstance();
 	$pagenavi_class->XoopsPageNav( $mime_total_all, $this->_PERPAGE, $get_start, 'start', 'fct=mimetypes' );
 	$navi = $pagenavi_class->renderNav();
 
@@ -496,14 +496,14 @@ function _get_allowed_mime_array( $id )
 //---------------------------------------------------------
 function _print_mime_form_mimetype( $row )
 {
-	$mime_form =& webphoto_admin_mime_form::getInstance( 
+	$mime_form = webphoto_admin_mime_form::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$mime_form->print_form_mimetype( $row );
 }
 
 function _print_mime_form_mimefind()
 {
-	$mime_form =& webphoto_admin_mime_form::getInstance( 
+	$mime_form = webphoto_admin_mime_form::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$mime_form->print_form_mimefind();
 }

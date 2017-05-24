@@ -60,7 +60,7 @@ function webphoto_inc_gmap_info( $dirname , $trust_dirname )
 
 	$this->_uri_class =& webphoto_inc_uri::getSingleton( $dirname );
 
-	$this->_mysql_utility_class =& webphoto_lib_mysql_utility::getInstance();
+	$this->_mysql_utility_class = webphoto_lib_mysql_utility::getInstance();
 }
 
 public static function &getSingleton( $dirname , $trust_dirname )

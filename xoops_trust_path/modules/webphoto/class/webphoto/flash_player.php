@@ -92,18 +92,18 @@ function webphoto_flash_player( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_ini( $dirname, $trust_dirname );
 
-	$this->_xoops_class      =& webphoto_xoops_base::getInstance();
-	$this->_utility_class    =& webphoto_lib_utility::getInstance();
-	$this->_config_class     =& webphoto_config::getInstance( $dirname );
+	$this->_xoops_class      = webphoto_xoops_base::getInstance();
+	$this->_utility_class    = webphoto_lib_utility::getInstance();
+	$this->_config_class     = webphoto_config::getInstance( $dirname );
 
 	$this->_item_handler     
-		=& webphoto_item_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_item_handler::getInstance( $dirname , $trust_dirname );
 	$this->_file_handler     
-		=& webphoto_file_handler::getInstance( $dirname , $trust_dirname  );
+		= webphoto_file_handler::getInstance( $dirname , $trust_dirname  );
 	$this->_player_handler   
-		=& webphoto_player_handler::getInstance( $dirname , $trust_dirname  );
+		= webphoto_player_handler::getInstance( $dirname , $trust_dirname  );
 	$this->_flashvar_handler 
-		=& webphoto_flashvar_handler::getInstance( $dirname , $trust_dirname  );
+		= webphoto_flashvar_handler::getInstance( $dirname , $trust_dirname  );
 
 	$uploads_path             = $this->_config_class->get_uploads_path();
 	$this->_cfg_use_callback  = $this->_config_class->get_by_name( 'use_callback' );

@@ -23,10 +23,10 @@ class webphoto_notification_select
 //---------------------------------------------------------
 function webphoto_notification_select( $dirname )
 {
-	$this->_notification_select_class =& webphoto_d3_notification_select::getInstance();
+	$this->_notification_select_class = webphoto_d3_notification_select::getInstance();
 	$this->_notification_select_class->init( $dirname ); 
 
-	$this->_config_class =& webphoto_config::getInstance( $dirname );
+	$this->_config_class = webphoto_config::getInstance( $dirname );
 	$this->_cfg_use_pathinfo = $this->_config_class->get_by_name('use_pathinfo');
 }
 

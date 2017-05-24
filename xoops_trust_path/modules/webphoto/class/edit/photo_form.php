@@ -121,23 +121,23 @@ function webphoto_edit_photo_form( $dirname, $trust_dirname )
 	$this->webphoto_edit_form( $dirname, $trust_dirname );
 
 	$this->_gicon_handler  
-		=& webphoto_gicon_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_gicon_handler::getInstance( $dirname, $trust_dirname );
 	$this->_player_handler 
-		=& webphoto_player_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_player_handler::getInstance( $dirname, $trust_dirname );
 
 	$this->_embed_class    
-		=& webphoto_embed::getInstance( $dirname, $trust_dirname );
+		= webphoto_embed::getInstance( $dirname, $trust_dirname );
 	$this->_editor_class   
-		=& webphoto_editor::getInstance( $dirname, $trust_dirname );
+		= webphoto_editor::getInstance( $dirname, $trust_dirname );
 	$this->_mime_class     
-		=& webphoto_mime::getInstance( $dirname, $trust_dirname  );
+		= webphoto_mime::getInstance( $dirname, $trust_dirname  );
 	$this->_tag_build_class      
-		=& webphoto_tag_build::getInstance( $dirname, $trust_dirname );
+		= webphoto_tag_build::getInstance( $dirname, $trust_dirname );
 	$this->_use_item_class      
-		=& webphoto_edit_use_item::getInstance( $dirname, $trust_dirname );
+		= webphoto_edit_use_item::getInstance( $dirname, $trust_dirname );
 
-	$this->_kind_class     =& webphoto_kind::getInstance();
-	$this->_image_create_class =& webphoto_image_create::getInstance( $dirname );
+	$this->_kind_class     = webphoto_kind::getInstance();
+	$this->_image_create_class = webphoto_image_create::getInstance( $dirname );
 
 	$this->_has_image_resize  = $this->_image_create_class->has_resize();
 	$this->_has_image_rotate  = $this->_image_create_class->has_rotate();

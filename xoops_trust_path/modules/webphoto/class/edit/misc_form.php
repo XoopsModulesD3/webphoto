@@ -51,12 +51,12 @@ function webphoto_edit_misc_form( $dirname, $trust_dirname )
 	$this->webphoto_edit_form( $dirname, $trust_dirname );
 
 	$this->_editor_class 
-		=& webphoto_editor::getInstance( $dirname, $trust_dirname );
+		= webphoto_editor::getInstance( $dirname, $trust_dirname );
 	$this->_ffmpeg_class 
-		=& webphoto_ffmpeg::getInstance( $dirname, $trust_dirname );
+		= webphoto_ffmpeg::getInstance( $dirname, $trust_dirname );
 	$this->_icon_build_class 
-		=& webphoto_edit_icon_build::getInstance( $dirname );
-	$this->_kind_class   =& webphoto_kind::getInstance();
+		= webphoto_edit_icon_build::getInstance( $dirname );
+	$this->_kind_class   = webphoto_kind::getInstance();
 
 	$this->_ini_kind_list_video = $this->explode_ini('item_kind_list_video');
 }

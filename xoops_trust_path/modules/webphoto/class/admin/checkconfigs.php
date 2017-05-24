@@ -59,8 +59,8 @@ function webphoto_admin_checkconfigs( $dirname, $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname, $trust_dirname );
 
-	$this->_server_class    =& webphoto_lib_server_info::getInstance();
-	$this->_multibyte_class =& webphoto_lib_multibyte::getInstance();
+	$this->_server_class    = webphoto_lib_server_info::getInstance();
+	$this->_multibyte_class = webphoto_lib_multibyte::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )
@@ -147,15 +147,15 @@ function _check_pathinfo_link()
 
 function _check_program()
 {
-	$gd_class           =& webphoto_lib_gd::getInstance();
-	$imagemagick_class  =& webphoto_lib_imagemagick::getInstance();
-	$netpbm_class       =& webphoto_lib_netpbm::getInstance();
-	$ffmpeg_class       =& webphoto_lib_ffmpeg::getInstance();
-	$lame_class         =& webphoto_lib_lame::getInstance();
-	$timidity_class     =& webphoto_lib_timidity::getInstance();
-	$xpdf_class         =& webphoto_lib_xpdf::getInstance();
+	$gd_class           = webphoto_lib_gd::getInstance();
+	$imagemagick_class  = webphoto_lib_imagemagick::getInstance();
+	$netpbm_class       = webphoto_lib_netpbm::getInstance();
+	$ffmpeg_class       = webphoto_lib_ffmpeg::getInstance();
+	$lame_class         = webphoto_lib_lame::getInstance();
+	$timidity_class     = webphoto_lib_timidity::getInstance();
+	$xpdf_class         = webphoto_lib_xpdf::getInstance();
 	$jodconverter_class 
-		=& webphoto_jodconverter::getInstance( $this->_DIRNAME, $this->_TRUST_DIRNAME );
+		= webphoto_jodconverter::getInstance( $this->_DIRNAME, $this->_TRUST_DIRNAME );
 
 	$cfg_imagingpipe  = $this->get_config_by_name('imagingpipe');
 	$cfg_use_ffmpeg   = $this->get_config_by_name('use_ffmpeg');

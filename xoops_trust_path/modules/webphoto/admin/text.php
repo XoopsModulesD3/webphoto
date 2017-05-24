@@ -17,7 +17,7 @@ webphoto_include_once( 'class/admin/text.php' );
 //=========================================================
 // main
 //=========================================================
-$webphoto_manage =& webphoto_admin_text::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$webphoto_manage = webphoto_admin_text::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $webphoto_manage->main();
 exit();
 

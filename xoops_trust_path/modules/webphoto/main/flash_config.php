@@ -37,7 +37,7 @@ webphoto_include_once( 'class/main/flash_config.php' );
 //=========================================================
 // main
 //=========================================================
-$webphoto_manage =& webphoto_main_flash_config::getInstance( 
+$webphoto_manage = webphoto_main_flash_config::getInstance( 
 	WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $webphoto_manage->main();
 exit();

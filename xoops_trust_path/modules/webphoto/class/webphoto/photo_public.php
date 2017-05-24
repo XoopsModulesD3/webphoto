@@ -54,9 +54,9 @@ class webphoto_photo_public
 function webphoto_photo_public( $dirname, $trust_dirname )
 {
 	$this->_item_cat_handler 
-		=& webphoto_item_cat_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_item_cat_handler::getInstance( $dirname, $trust_dirname );
 
-	$this->_config_class   =& webphoto_config::getInstance( $dirname );
+	$this->_config_class   = webphoto_config::getInstance( $dirname );
 
 	$this->_cfg_perm_cat_read  = $this->_config_class->get_by_name( 'perm_cat_read' );
 	$cfg_perm_item_read        = $this->_config_class->get_by_name( 'perm_item_read' );

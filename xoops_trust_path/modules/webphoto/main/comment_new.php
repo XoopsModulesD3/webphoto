@@ -27,7 +27,7 @@ webphoto_include_once( 'main/header_item_handler.php' );
 // main
 //=========================================================
 $webphoto_item_handler 
-	=& webphoto_item_handler::getInstance( WEBPHOTO_DIRNAME, WEBPHOTO_TRUST_DIRNAME );
+	= webphoto_item_handler::getInstance( WEBPHOTO_DIRNAME, WEBPHOTO_TRUST_DIRNAME );
 
 $com_replytitle = $webphoto_item_handler->get_replytitle();
 if ( $com_replytitle ) {

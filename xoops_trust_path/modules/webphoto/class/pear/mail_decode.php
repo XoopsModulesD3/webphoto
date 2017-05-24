@@ -26,7 +26,7 @@ class webphoto_pear_mail_decode
 //---------------------------------------------------------
 function webphoto_pear_mail_decode()
 {
-	$this->_mail_class =& webphoto_lib_mail::getInstance();
+	$this->_mail_class = webphoto_lib_mail::getInstance();
 }
 
 public static function &getInstance()

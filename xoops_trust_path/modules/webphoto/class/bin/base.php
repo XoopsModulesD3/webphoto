@@ -83,11 +83,11 @@ function webphoto_bin_base( $dirname , $trust_dirname )
 
 function _init( $dirname , $trust_dirname )
 {
-	$xoops_class =& webphoto_xoops_base::getInstance();
+	$xoops_class = webphoto_xoops_base::getInstance();
 	$LANGUAGE = $xoops_class->get_language();
 
 // read lang file
-	$d3_class =& webphoto_d3_optional::getInstance();
+	$d3_class = webphoto_d3_optional::getInstance();
 	$d3_class->init( $dirname , $trust_dirname );
 	$d3_class->set_language( $LANGUAGE );
 	$d3_class->include_once_language( 'main.php',  $this->_DEBUG_D3 );
@@ -118,7 +118,7 @@ function _init( $dirname , $trust_dirname )
 //---------------------------------------------------------
 function preload_init()
 {
-	$this->_preload_class =& webphoto_d3_preload::getInstance();
+	$this->_preload_class = webphoto_d3_preload::getInstance();
 	$this->_preload_class->init( $this->_DIRNAME , $this->_TRUST_DIRNAME );
 }
 

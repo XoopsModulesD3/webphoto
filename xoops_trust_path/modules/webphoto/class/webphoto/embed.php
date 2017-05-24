@@ -46,7 +46,7 @@ function webphoto_embed( $dirname, $trust_dirname )
 	$this->set_dirname( 'embeds' );
 	$this->set_prefix(  'webphoto_embed_' );
 
-	$this->_config_class =& webphoto_config::getInstance( $dirname );
+	$this->_config_class = webphoto_config::getInstance( $dirname );
 	$this->_WORK_DIR     = $this->_config_class->get_by_name( 'workdir' );
 	$this->_TMP_DIR      = $this->_WORK_DIR .'/tmp' ;
 

@@ -98,7 +98,7 @@ function trigger_event( $category , $item_id , $event , $extra_tags=array() , $u
 		$criteria->add($user_criteria);
 	}
 
-	$notifications =& $notification_handler->getObjects($criteria);
+	$notifications = $notification_handler->getObjects($criteria);
 	if (empty($notifications)) {
 		return;
 	}

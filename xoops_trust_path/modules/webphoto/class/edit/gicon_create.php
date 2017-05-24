@@ -29,7 +29,7 @@ function webphoto_edit_gicon_create( $dirname, $trust_dirname )
 {
 	$this->webphoto_edit_base_create( $dirname, $trust_dirname );
 
-	$this->_image_create_class =& webphoto_image_create::getInstance( $dirname );
+	$this->_image_create_class = webphoto_image_create::getInstance( $dirname );
 
 	$this->_cfg_gicon_width  = $this->get_config_by_name( 'gicon_width' ) ;
 	$this->_cfg_gicon_height = $this->get_config_by_name( 'gicon_height' ) ;

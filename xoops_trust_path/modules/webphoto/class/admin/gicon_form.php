@@ -44,7 +44,7 @@ function webphoto_admin_gicon_form( $dirname , $trust_dirname )
 	$this->webphoto_edit_form( $dirname , $trust_dirname );
 
 	$this->_gicon_handler 
-		=& webphoto_gicon_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_gicon_handler::getInstance( $dirname, $trust_dirname );
 
 	$this->_cfg_fsize       = $this->_config_class->get_by_name( 'fsize' );
 	$this->_cfg_gicon_width = $this->_config_class->get_by_name( 'gicon_width' );

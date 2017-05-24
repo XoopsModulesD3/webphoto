@@ -23,7 +23,7 @@ webphoto_include_once( 'class/main/rate.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_rate::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_rate::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 
 // exit if execute rate
 $manage->rate();

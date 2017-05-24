@@ -110,25 +110,25 @@ function webphoto_edit_submit( $dirname , $trust_dirname )
 	$this->webphoto_edit_imagemanager_submit( $dirname , $trust_dirname );
 
 	$this->_page_class       
-		=& webphoto_page::getInstance( $dirname , $trust_dirname );
+		= webphoto_page::getInstance( $dirname , $trust_dirname );
 	$this->_show_image_class 
-		=& webphoto_show_image::getInstance( $dirname , $trust_dirname );
+		= webphoto_show_image::getInstance( $dirname , $trust_dirname );
 	$this->_embed_build_class    
-		=& webphoto_edit_embed_build::getInstance( $dirname, $trust_dirname );
+		= webphoto_edit_embed_build::getInstance( $dirname, $trust_dirname );
 	$this->_editor_class 
-		=& webphoto_editor::getInstance( $dirname, $trust_dirname );
+		= webphoto_editor::getInstance( $dirname, $trust_dirname );
 	$this->_photo_form_class 
-		=& webphoto_edit_photo_form::getInstance( $dirname, $trust_dirname );
+		= webphoto_edit_photo_form::getInstance( $dirname, $trust_dirname );
 	$this->_misc_form_class 
-		=& webphoto_edit_misc_form::getInstance( $dirname, $trust_dirname );
+		= webphoto_edit_misc_form::getInstance( $dirname, $trust_dirname );
 	$this->_playlist_build_class 
-		=& webphoto_edit_playlist_build::getInstance( $dirname, $trust_dirname );
+		= webphoto_edit_playlist_build::getInstance( $dirname, $trust_dirname );
 	$this->_external_build_class 
-		=& webphoto_edit_external_build::getInstance( $dirname, $trust_dirname  );
+		= webphoto_edit_external_build::getInstance( $dirname, $trust_dirname  );
 	$this->_tag_build_class  
-		=& webphoto_tag_build::getInstance( $dirname, $trust_dirname  );
+		= webphoto_tag_build::getInstance( $dirname, $trust_dirname  );
 	$this->_mail_send_class  
-		=& webphoto_mail_send::getInstance( $dirname, $trust_dirname  );
+		= webphoto_mail_send::getInstance( $dirname, $trust_dirname  );
 
 	$this->_tag_build_class->set_is_japanese( $this->_is_japanese );
 
@@ -423,7 +423,7 @@ function submit_exec_tag_save( $item_row )
 
 function submit_exec_post_count()
 {
-	$xoops_user_class =& webphoto_xoops_user::getInstance();
+	$xoops_user_class = webphoto_xoops_user::getInstance();
 	$xoops_user_class->increment_post_by_num_own( $this->_cfg_addposts );
 }
 
@@ -442,7 +442,7 @@ function submit_exec_notify( $item_row )
 
 function notify_new_photo( $item_row )
 {
-	$notification_class =& webphoto_notification_event::getInstance(
+	$notification_class = webphoto_notification_event::getInstance(
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$notification_class->notify_new_photo( 
 		$item_row['item_id'],  $item_row['item_cat_id'],  $item_row['item_title'] );
@@ -450,7 +450,7 @@ function notify_new_photo( $item_row )
 
 function notify_waiting( $item_row )
 {
-	$notification_class =& webphoto_notification_event::getInstance(
+	$notification_class = webphoto_notification_event::getInstance(
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$notification_class->notify_waiting( 
 		$item_row['item_id'], $item_row['item_title'] );

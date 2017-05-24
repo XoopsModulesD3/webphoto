@@ -19,7 +19,7 @@ webphoto_include_once( 'class/d3/module_icon.php',  $MY_DIRNAME , false );
 //---------------------------------------------------------
 // main
 //---------------------------------------------------------
-$webphoto_d3_module_icon =& webphoto_d3_module_icon::getInstance();
+$webphoto_d3_module_icon = webphoto_d3_module_icon::getInstance();
 $webphoto_d3_module_icon->init( $MY_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $webphoto_d3_module_icon->output_image();
 

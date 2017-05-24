@@ -22,7 +22,7 @@ function webphoto_main_i_post( $dirname , $trust_dirname )
 {
 	$this->webphoto_imode( $dirname , $trust_dirname );
 
-	$this->_retrieve_class  =& webphoto_edit_mail_retrieve::getInstance(
+	$this->_retrieve_class  = webphoto_edit_mail_retrieve::getInstance(
 		$dirname , $trust_dirname );
 
 	$this->_retrieve_class->set_flag_force_db( true );

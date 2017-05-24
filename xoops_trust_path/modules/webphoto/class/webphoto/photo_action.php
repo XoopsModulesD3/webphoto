@@ -47,7 +47,7 @@ function webphoto_photo_action( $dirname , $trust_dirname )
 {
 	$this->webphoto_photo_submit( $dirname , $trust_dirname );
 
-	$this->_show_image_class =& webphoto_show_image::getInstance( $dirname );
+	$this->_show_image_class = webphoto_show_image::getInstance( $dirname );
 }
 
 // for admin_photo_manage admin_catmanager
@@ -150,7 +150,7 @@ function print_form_video_thumb( $mode, $item_row )
 		echo "<br />\n";
 	}
 
-	$form_class =& webphoto_photo_misc_form::getInstance(
+	$form_class = webphoto_photo_misc_form::getInstance(
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$form_class->print_form_video_thumb( $mode, $item_row );
 }
@@ -171,7 +171,7 @@ function print_form_delete_confirm( $mode, $item_row )
 
 	echo "<br />\n";
 
-	$form_class =& webphoto_photo_misc_form::getInstance(
+	$form_class = webphoto_photo_misc_form::getInstance(
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 // BUG: return to admin when delete
@@ -519,7 +519,7 @@ function delete_exec( $item_row )
 		return _C_WEBPHOTO_ERR_NO_PERM;
 	}
 
-	$delete_class =& webphoto_photo_delete::getInstance( $this->_DIRNAME );
+	$delete_class = webphoto_photo_delete::getInstance( $this->_DIRNAME );
 
 	$ret = $delete_class->delete_photo_by_item_row( $item_row );
 	if ( !$ret ) {

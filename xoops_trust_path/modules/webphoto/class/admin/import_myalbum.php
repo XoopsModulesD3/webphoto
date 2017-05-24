@@ -34,7 +34,7 @@ function webphoto_admin_import_myalbum( $dirname , $trust_dirname )
 {
 	$this->webphoto_edit_import( $dirname , $trust_dirname );
 
-	$this->_form_class =& webphoto_admin_import_form::getInstance( $dirname , $trust_dirname );
+	$this->_form_class = webphoto_admin_import_form::getInstance( $dirname , $trust_dirname );
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

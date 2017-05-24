@@ -31,7 +31,7 @@ webphoto_include_once( 'class/main/photo.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_photo::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_photo::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manage->init();
 
 // exit if execute edittag

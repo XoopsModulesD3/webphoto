@@ -52,7 +52,7 @@ function webphoto_edit_middle_thumb_create( $dirname , $trust_dirname  )
 {
 	$this->webphoto_edit_base_create( $dirname , $trust_dirname  );
 
-	$this->_image_create_class =& webphoto_image_create::getInstance( $dirname );
+	$this->_image_create_class = webphoto_image_create::getInstance( $dirname );
 
 	$this->_cfg_makethumb     = $this->get_config_by_name( 'makethumb' );
 	$this->_cfg_width         = $this->get_config_by_name( 'width' ) ;

@@ -23,7 +23,7 @@ webphoto_include_once( 'class/main/submit.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_submit::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_submit::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 
 // exit if execute submit
 $manage->check_submit();

@@ -873,7 +873,7 @@ function build_datetime_by_post( $key, $default=null )
 
 function build_datetime( $str )
 {
-	$utility_class =& webphoto_lib_utility::getInstance();
+	$utility_class = webphoto_lib_utility::getInstance();
 	return $utility_class->str_to_mysql_datetime( $str );
 }
 
@@ -882,13 +882,13 @@ function build_datetime( $str )
 //---------------------------------------------------------
 function build_show_description_disp( $row )
 {
-	(method_exists('MyTextSanitizer', 'sGetInstance') and $myts =& MyTextSanitizer::sGetInstance()) || $myts =& MyTextSanitizer::getInstance();
+	(method_exists('MyTextSanitizer', 'sGetInstance') and $myts = MyTextSanitizer::sGetInstance()) || $myts = MyTextSanitizer::getInstance();
 	return $myts->displayTarea( $row['photo_description'] , 0 , 1 , 1 , 1 , 1  );
 }
 
 function build_show_cont_exif_disp( $row )
 {
-	(method_exists('MyTextSanitizer', 'sGetInstance') and $myts =& MyTextSanitizer::sGetInstance()) || $myts =& MyTextSanitizer::getInstance();
+	(method_exists('MyTextSanitizer', 'sGetInstance') and $myts = MyTextSanitizer::sGetInstance()) || $myts = MyTextSanitizer::getInstance();
 	return $myts->displayTarea( $row['photo_cont_exif'] , 0 , 0 , 0 , 0 , 1 );
 }
 

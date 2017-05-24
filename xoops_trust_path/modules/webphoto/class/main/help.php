@@ -38,7 +38,7 @@ function webphoto_main_help( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_page_class =& webphoto_page::getInstance( $dirname , $trust_dirname );
+	$this->_page_class = webphoto_page::getInstance( $dirname , $trust_dirname );
 
 	$this->preload_init();
 	$this->preload_constant();
@@ -195,7 +195,7 @@ function _assign_xoops_header()
 {
 // Fatal error: Call to undefined method webphoto_inc_xoops_header::assign_for_main() 
 	$header_class 
-		=& webphoto_xoops_header::getInstance( $this->_DIRNAME, $this->_TRUST_DIRNAME );
+		= webphoto_xoops_header::getInstance( $this->_DIRNAME, $this->_TRUST_DIRNAME );
 	$header_class->set_flag_css( true );
 	$header_class->assign_for_main();
 }

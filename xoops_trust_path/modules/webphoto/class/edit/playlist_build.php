@@ -40,9 +40,9 @@ function webphoto_edit_playlist_build( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_ini( $dirname, $trust_dirname );
 
-	$this->_playlist_class   =& webphoto_playlist::getInstance( 
+	$this->_playlist_class   = webphoto_playlist::getInstance( 
 		$dirname , $trust_dirname );
-	$this->_icon_build_class =& webphoto_edit_icon_build::getInstance( $dirname );
+	$this->_icon_build_class = webphoto_edit_icon_build::getInstance( $dirname );
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

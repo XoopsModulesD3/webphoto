@@ -75,12 +75,12 @@ function webphoto_playlist( $dirname , $trust_dirname )
 	$this->_MODULE_URL = XOOPS_URL       .'/modules/'. $dirname;
 	$this->_MODULE_DIR = XOOPS_ROOT_PATH .'/modules/'. $dirname;
 
-	$this->_config_class    =& webphoto_config::getInstance( $dirname );
-	$this->_utility_class   =& webphoto_lib_utility::getInstance();
-	$this->_xml_class       =& webphoto_lib_xml::getInstance();
-	$this->_remote_class    =& webphoto_lib_remote_file::getInstance();
-	$this->_multibyte_class =& webphoto_lib_multibyte::getInstance();
-	$this->_item_handler    =& webphoto_item_handler::getInstance( 
+	$this->_config_class    = webphoto_config::getInstance( $dirname );
+	$this->_utility_class   = webphoto_lib_utility::getInstance();
+	$this->_xml_class       = webphoto_lib_xml::getInstance();
+	$this->_remote_class    = webphoto_lib_remote_file::getInstance();
+	$this->_multibyte_class = webphoto_lib_multibyte::getInstance();
+	$this->_item_handler    = webphoto_item_handler::getInstance( 
 		$dirname  , $trust_dirname );
 
 	$uploads_path = $this->_config_class->get_uploads_path();

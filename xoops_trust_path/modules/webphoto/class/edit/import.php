@@ -80,17 +80,17 @@ function webphoto_edit_import( $dirname , $trust_dirname )
 	$this->_cat_handler->set_debug_error( 1 );
 	$this->_item_create_class->set_debug_error( 1 );
 
-	$this->_vote_handler  =& webphoto_vote_handler::getInstance( 
+	$this->_vote_handler  = webphoto_vote_handler::getInstance( 
 		$dirname , $trust_dirname );
 	$this->_vote_handler->set_debug_error( 1 );
 
-	$this->_xoops_comments_handler =& webphoto_xoops_comments_handler::getInstance();
+	$this->_xoops_comments_handler = webphoto_xoops_comments_handler::getInstance();
 	$this->_xoops_comments_handler->set_debug_error( 1 );
 
-	$this->_myalbum_handler =& webphoto_myalbum_handler::getInstance();
+	$this->_myalbum_handler = webphoto_myalbum_handler::getInstance();
 	$this->_myalbum_handler->set_debug_error( 1 );
 
-	$this->_factory_create_class =& webphoto_edit_factory_create::getInstance( 
+	$this->_factory_create_class = webphoto_edit_factory_create::getInstance( 
 		$dirname , $trust_dirname );
 	$this->_factory_create_class->set_msg_level( _C_WEBPHOTO_MSG_LEVEL_ADMIN );
 	$this->_factory_create_class->set_flag_print_first_msg( true );

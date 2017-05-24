@@ -75,9 +75,9 @@ function webphoto_lib_form( $dirname, $trust_dirname )
 	$this->set_form_name(    $dirname.'_form' );
 	$this->set_title_header( $dirname );
 
-	$this->_xoops_class    =& webphoto_xoops_base::getInstance();
-	$this->_post_class     =& webphoto_lib_post::getInstance();
-	$this->_utility_class  =& webphoto_lib_utility::getInstance();
+	$this->_xoops_class    = webphoto_xoops_base::getInstance();
+	$this->_post_class     = webphoto_lib_post::getInstance();
+	$this->_utility_class  = webphoto_lib_utility::getInstance();
 
 	$this->set_keyword_min( 
 		$this->_xoops_class->get_search_config_by_name( 'keyword_min' ) );
@@ -121,7 +121,7 @@ function get_post_js_checkbox_array()
 //---------------------------------------------------------
 function init_pagenavi()
 {
-	$this->_pagenavi_class =& webphoto_lib_pagenavi::getInstance();
+	$this->_pagenavi_class = webphoto_lib_pagenavi::getInstance();
 }
 
 function build_form_pagenavi_perpage()
@@ -161,7 +161,7 @@ function get_fct_from_post()
 //---------------------------------------------------------
 function build_admin_menu()
 {
-	$menu_class =& webphoto_lib_admin_menu::getInstance(
+	$menu_class = webphoto_lib_admin_menu::getInstance(
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	return $menu_class->build_menu_with_sub( $this->_FLAG_ADMIN_SUB_MENU );
 }
@@ -320,7 +320,7 @@ function format_timestamp( $time, $format="l", $timeoffset="" )
 //---------------------------------------------------------
 function _init_d3_language( $dirname, $trust_dirname )
 {
-	$this->_language_class =& webphoto_d3_language::getInstance();
+	$this->_language_class = webphoto_d3_language::getInstance();
 	$this->_language_class->init( $dirname, $trust_dirname );
 	$this->set_trust_dirname( $trust_dirname );
 }

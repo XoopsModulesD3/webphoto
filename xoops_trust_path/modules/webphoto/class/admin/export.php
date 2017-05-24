@@ -42,9 +42,9 @@ function webphoto_admin_export( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_groupperm_class =& webphoto_xoops_groupperm::getInstance();
+	$this->_groupperm_class = webphoto_xoops_groupperm::getInstance();
 
-	$this->_image_handler =& webphoto_xoops_image_handler::getInstance();
+	$this->_image_handler = webphoto_xoops_image_handler::getInstance();
 	$this->_image_handler->set_debug_error( 1 );
 
 	$val = $this->get_ini( _C_WEBPHOTO_NAME_DEBUG_SQL );
@@ -250,7 +250,7 @@ function _print_form_image()
 {
 	echo "<h4>"._AM_WEBPHOTO_FMT_EXPORTTOIMAGEMANAGER."</h4>\n";
 
-	$cat_selbox_class =& webphoto_cat_selbox::getInstance();
+	$cat_selbox_class = webphoto_cat_selbox::getInstance();
 	$cat_selbox_class->init( $this->_DIRNAME, $this->_TRUST_DIRNAME );
 
 	$this->_form_class->print_form_image(

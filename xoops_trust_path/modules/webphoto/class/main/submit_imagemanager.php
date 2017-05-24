@@ -252,7 +252,7 @@ function _create_media_file_params( $item_row )
 //---------------------------------------------------------
 function _print_form_imagemanager()
 {
-	$form_class =& webphoto_edit_imagemanager_form::getInstance( 
+	$form_class = webphoto_edit_imagemanager_form::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	$template = 'db:'. $this->_DIRNAME .'_main_submit_imagemanager.html';

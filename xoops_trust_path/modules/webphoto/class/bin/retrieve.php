@@ -34,9 +34,9 @@ function webphoto_bin_retrieve( $dirname , $trust_dirname )
 {
 	$this->webphoto_bin_base( $dirname , $trust_dirname );
 
-	$this->_config_class =& webphoto_config::getInstance( $dirname );
+	$this->_config_class = webphoto_config::getInstance( $dirname );
 
-	$this->_retrieve_class =& webphoto_edit_mail_retrieve::getInstance( $dirname , $trust_dirname );
+	$this->_retrieve_class = webphoto_edit_mail_retrieve::getInstance( $dirname , $trust_dirname );
 	$this->_retrieve_class->set_flag_force_db( true );
 	$this->_retrieve_class->set_flag_print_first_msg( true );
 

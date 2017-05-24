@@ -31,7 +31,7 @@ function webphoto_admin_check_file( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_file_check_class =& webphoto_lib_file_check::getInstance(
+	$this->_file_check_class = webphoto_lib_file_check::getInstance(
 		$dirname , $trust_dirname );
 }
 

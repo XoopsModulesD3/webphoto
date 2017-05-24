@@ -69,7 +69,7 @@ class webphoto_inc_handler
 //---------------------------------------------------------
 function webphoto_inc_handler()
 {
-	$this->_db =& Database::getInstance();
+	$this->_db = Database::getInstance();
 
 	$this->_init_xoops_groups();
 }

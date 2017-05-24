@@ -58,16 +58,16 @@ function webphoto_edit_mail_photo( $dirname , $trust_dirname )
 	$this->webphoto_edit_base( $dirname , $trust_dirname );
 
 	$this->_factory_create_class 
-		=& webphoto_edit_factory_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_factory_create::getInstance( $dirname , $trust_dirname );
 	$this->_user_handler    
-		=& webphoto_user_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_user_handler::getInstance( $dirname, $trust_dirname );
 	$this->_maillog_handler 
-		=& webphoto_maillog_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_maillog_handler::getInstance( $dirname, $trust_dirname );
 	$this->_check_class     
-		=& webphoto_edit_mail_check::getInstance( $dirname, $trust_dirname );
+		= webphoto_edit_mail_check::getInstance( $dirname, $trust_dirname );
 
-	$this->_parse_class     =& webphoto_pear_mail_parse::getInstance();
-	$this->_unlink_class    =& webphoto_edit_mail_unlink::getInstance( $dirname );
+	$this->_parse_class     = webphoto_pear_mail_parse::getInstance();
+	$this->_unlink_class    = webphoto_edit_mail_unlink::getInstance( $dirname );
 
 	$this->_parse_class->set_charset_local( _CHARSET );
 	$this->_parse_class->set_internal_encoding();

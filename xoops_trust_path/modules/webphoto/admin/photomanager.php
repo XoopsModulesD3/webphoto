@@ -51,7 +51,7 @@ webphoto_include_once( 'class/admin/photomanager.php' );
 //=========================================================
 // main
 //=========================================================
-$manager =& webphoto_admin_photomanager::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manager = webphoto_admin_photomanager::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manager->main();
 exit();
 

@@ -31,7 +31,7 @@ webphoto_include_once( 'class/main/submit_file.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_submit_file::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_submit_file::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 
 // exit if execute
 $manage->check_action();

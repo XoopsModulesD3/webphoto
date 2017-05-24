@@ -47,9 +47,9 @@ function webphoto_admin_groupperm( $dirname , $trust_dirname )
 	$this->webphoto_edit_base( $dirname , $trust_dirname );
 
 	$this->_form_class 
-		=& webphoto_admin_groupperm_form::getInstance( $dirname , $trust_dirname );
+		= webphoto_admin_groupperm_form::getInstance( $dirname , $trust_dirname );
 
-	$this->_groupperm_class =& webphoto_lib_groupperm::getInstance();
+	$this->_groupperm_class = webphoto_lib_groupperm::getInstance();
 
 	$this->_THIS_URL = $this->_MODULE_URL .'/admin/index.php?fct='.$this->_THIS_FCT;
 }

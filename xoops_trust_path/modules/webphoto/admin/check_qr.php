@@ -20,7 +20,7 @@ webphoto_include_once( 'class/admin/check_qr.php' );
 //=========================================================
 // main
 //=========================================================
-$manager =& webphoto_admin_check_qr::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manager = webphoto_admin_check_qr::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manager->main();
 exit();
 

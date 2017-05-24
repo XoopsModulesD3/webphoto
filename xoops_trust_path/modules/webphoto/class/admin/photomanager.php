@@ -52,9 +52,9 @@ function webphoto_admin_photomanager( $dirname , $trust_dirname )
 {
 	$this->webphoto_edit_base( $dirname , $trust_dirname );
 
-	$this->_search_class =& webphoto_edit_search_build::getInstance( 
+	$this->_search_class = webphoto_edit_search_build::getInstance( 
 		$dirname , $trust_dirname );
-	$this->_delete_class =& webphoto_edit_item_delete::getInstance( 
+	$this->_delete_class = webphoto_edit_item_delete::getInstance( 
 		$dirname , $trust_dirname );
 }
 
@@ -266,7 +266,7 @@ function _update()
 //---------------------------------------------------------
 function _print_form()
 {
-	$form_class  =& webphoto_admin_photo_form::getInstance(
+	$form_class  = webphoto_admin_photo_form::getInstance(
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	$keyword_array = $this->str_to_array( $this->_get_txt, ' ' );

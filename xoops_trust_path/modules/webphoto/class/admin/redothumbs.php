@@ -82,22 +82,22 @@ function webphoto_admin_redothumbs( $dirname , $trust_dirname )
 {
 	$this->webphoto_edit_base( $dirname , $trust_dirname );
 
-	$this->_exif_class   =& webphoto_exif::getInstance();
+	$this->_exif_class   = webphoto_exif::getInstance();
 
 	$this->_delete_class 
-		=& webphoto_edit_item_delete::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_item_delete::getInstance( $dirname , $trust_dirname );
 	$this->_cont_create_class 
-		=& webphoto_edit_cont_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_cont_create::getInstance( $dirname , $trust_dirname );
 	$this->_middle_thumb_create_class 
-		=& webphoto_edit_middle_thumb_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_middle_thumb_create::getInstance( $dirname , $trust_dirname );
 	$this->_jpeg_create_class   
-		=& webphoto_edit_jpeg_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_jpeg_create::getInstance( $dirname , $trust_dirname );
 	$this->_pdf_create_class   
-		=& webphoto_edit_pdf_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_pdf_create::getInstance( $dirname , $trust_dirname );
 	$this->_icon_build_class 
-		=& webphoto_edit_icon_build::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_icon_build::getInstance( $dirname , $trust_dirname );
 	$this->_image_create_class 
-		=& webphoto_image_create::getInstance( $dirname );
+		= webphoto_image_create::getInstance( $dirname );
 
 	$this->_cfg_makethumb    = $this->get_config_by_name('makethumb');
 	$this->_cfg_allownoimage = $this->get_config_by_name( 'allownoimage' );
@@ -1244,7 +1244,7 @@ function clear_tmp_files( $dir_path , $prefix, $time=0 )
 //---------------------------------------------------------
 function _print_form( $param )
 {
-	$form =& webphoto_admin_redo_form::getInstance(
+	$form = webphoto_admin_redo_form::getInstance(
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$form->print_form_redothumbs( $param );
 }

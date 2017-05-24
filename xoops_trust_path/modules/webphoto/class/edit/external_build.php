@@ -28,9 +28,9 @@ class webphoto_edit_external_build
 //---------------------------------------------------------
 function webphoto_edit_external_build( $dirname )
 {
-	$this->_utility_class    =& webphoto_lib_utility::getInstance();
-	$this->_kind_class       =& webphoto_kind::getInstance();
-	$this->_icon_build_class =& webphoto_edit_icon_build::getInstance( $dirname );
+	$this->_utility_class    = webphoto_lib_utility::getInstance();
+	$this->_kind_class       = webphoto_kind::getInstance();
+	$this->_icon_build_class = webphoto_edit_icon_build::getInstance( $dirname );
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

@@ -31,7 +31,7 @@ function webphoto_ext_pdf( $dirname, $trust_dirname )
 	$this->webphoto_ext_base( $dirname, $trust_dirname );
 
 	$this->_pdf_class 
-		=& webphoto_pdf::getInstance( $dirname, $trust_dirname );
+		= webphoto_pdf::getInstance( $dirname, $trust_dirname );
 
 	$this->set_debug_by_name( 'PDF' );
 }

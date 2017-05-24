@@ -114,42 +114,42 @@ function webphoto_edit_factory_create( $dirname , $trust_dirname )
 	$this->webphoto_edit_base( $dirname , $trust_dirname );
 
 	$this->_search_build_class  
-		=& webphoto_edit_search_build::getInstance( $dirname , $trust_dirname  );
+		= webphoto_edit_search_build::getInstance( $dirname , $trust_dirname  );
 	$this->_item_build_class    
-		=& webphoto_edit_item_build::getInstance( $dirname , $trust_dirname   );
+		= webphoto_edit_item_build::getInstance( $dirname , $trust_dirname   );
 	$this->_cont_create_class   
-		=& webphoto_edit_cont_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_cont_create::getInstance( $dirname , $trust_dirname );
 	$this->_flash_create_class  
-		=& webphoto_edit_flash_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_flash_create::getInstance( $dirname , $trust_dirname );
 	$this->_docomo_create_class 
-		=& webphoto_edit_docomo_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_docomo_create::getInstance( $dirname , $trust_dirname );
 	$this->_small_create_class  
-		=& webphoto_edit_small_create::getInstance( $dirname , $trust_dirname  );
+		= webphoto_edit_small_create::getInstance( $dirname , $trust_dirname  );
 	$this->_middle_thumb_create_class 
-		=& webphoto_edit_middle_thumb_create::getInstance( $dirname , $trust_dirname  );
+		= webphoto_edit_middle_thumb_create::getInstance( $dirname , $trust_dirname  );
 	$this->_video_images_create_class 
-		=& webphoto_edit_video_images_create::getInstance( $dirname , $trust_dirname  );
+		= webphoto_edit_video_images_create::getInstance( $dirname , $trust_dirname  );
 	$this->_pdf_create_class   
-		=& webphoto_edit_pdf_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_pdf_create::getInstance( $dirname , $trust_dirname );
 	$this->_swf_create_class   
-		=& webphoto_edit_swf_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_swf_create::getInstance( $dirname , $trust_dirname );
 	$this->_jpeg_create_class   
-		=& webphoto_edit_jpeg_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_jpeg_create::getInstance( $dirname , $trust_dirname );
 	$this->_mp3_create_class   
-		=& webphoto_edit_mp3_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_mp3_create::getInstance( $dirname , $trust_dirname );
 	$this->_wav_create_class   
-		=& webphoto_edit_wav_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_wav_create::getInstance( $dirname , $trust_dirname );
 	$this->_file_action_class   
-		=& webphoto_edit_file_action::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_file_action::getInstance( $dirname , $trust_dirname );
 	$this->_video_middle_thumb_create_class 
-		=& webphoto_edit_video_middle_thumb_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_video_middle_thumb_create::getInstance( $dirname , $trust_dirname );
 	$this->_ext_build_class  
-		=& webphoto_edit_ext_build::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_ext_build::getInstance( $dirname , $trust_dirname );
 	$this->_image_create_class 
-		=& webphoto_image_create::getInstance( $dirname );
+		= webphoto_image_create::getInstance( $dirname );
 
-	$this->_icon_build_class  =& webphoto_edit_icon_build::getInstance( $dirname );
-	$this->_multibyte_class   =& webphoto_lib_multibyte::getInstance();
+	$this->_icon_build_class  = webphoto_edit_icon_build::getInstance( $dirname );
+	$this->_multibyte_class   = webphoto_lib_multibyte::getInstance();
 
 	$this->_msg_main_class = new webphoto_lib_msg();
 	$this->_msg_sub_class  = new webphoto_lib_msg();

@@ -24,7 +24,7 @@ webphoto_include_once( 'class/main/place.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_place::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_place::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 
 $xoopsOption['template_main'] = $manage->list_get_template() ;
 include XOOPS_ROOT_PATH . '/header.php' ;

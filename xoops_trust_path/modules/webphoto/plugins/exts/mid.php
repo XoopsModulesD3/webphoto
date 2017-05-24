@@ -32,9 +32,9 @@ function webphoto_ext_mid( $dirname, $trust_dirname )
 {
 	$this->webphoto_ext_base( $dirname, $trust_dirname );
 
-	$this->_timidity_class =& webphoto_timidity::getInstance( $dirname, $trust_dirname );
-	$this->_lame_class     =& webphoto_lame::getInstance(     $dirname, $trust_dirname );
-	$this->_ffmpeg_class   =& webphoto_ffmpeg::getInstance(   $dirname, $trust_dirname );
+	$this->_timidity_class = webphoto_timidity::getInstance( $dirname, $trust_dirname );
+	$this->_lame_class     = webphoto_lame::getInstance(     $dirname, $trust_dirname );
+	$this->_ffmpeg_class   = webphoto_ffmpeg::getInstance(   $dirname, $trust_dirname );
 
 	$this->set_debug_by_name( 'MID' );
 }

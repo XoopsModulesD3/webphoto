@@ -78,11 +78,11 @@ function webphoto_photo_create( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_build_class  =& webphoto_photo_build::getInstance( $dirname );
-	$this->_mime_class   =& webphoto_mime::getInstance( $dirname );
-	$this->_video_class  =& webphoto_video::getInstance( $dirname );
-	$this->_exif_class   =& webphoto_lib_exif::getInstance();
-	$this->_image_class  =& webphoto_image_create::getInstance( $dirname , $trust_dirname );
+	$this->_build_class  = webphoto_photo_build::getInstance( $dirname );
+	$this->_mime_class   = webphoto_mime::getInstance( $dirname );
+	$this->_video_class  = webphoto_video::getInstance( $dirname );
+	$this->_exif_class   = webphoto_lib_exif::getInstance();
+	$this->_image_class  = webphoto_image_create::getInstance( $dirname , $trust_dirname );
 
 	$this->_cfg_makethumb    = $this->get_config_by_name( 'makethumb' );
 	$this->_cfg_use_ffmpeg   = $this->get_config_by_name( 'use_ffmpeg' );

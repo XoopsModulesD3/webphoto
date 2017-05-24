@@ -34,7 +34,7 @@ function webphoto_timidity( $dirname, $trust_dirname )
 {
 	$this->webphoto_cmd_base( $dirname, $trust_dirname );
 
-	$this->_timidity_class   =& webphoto_lib_timidity::getInstance();
+	$this->_timidity_class   = webphoto_lib_timidity::getInstance();
 
 	$this->_cfg_use_timidity = $this->get_config_by_name( 'use_timidity' );
 

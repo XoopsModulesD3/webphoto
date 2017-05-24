@@ -53,7 +53,7 @@ function webphoto_edit_mail_retrieve( $dirname , $trust_dirname )
 	$this->webphoto_edit_mail_photo( $dirname , $trust_dirname );
 	$this->set_mail_groups( XOOPS_GROUP_USERS );
 
-	$this->_pop_class =& webphoto_pear_mail_pop3::getInstance();
+	$this->_pop_class = webphoto_pear_mail_pop3::getInstance();
 
 	$cfg_mail_host        = $this->get_config_by_name( 'mail_host' );
 	$cfg_mail_user        = $this->get_config_by_name( 'mail_user' );

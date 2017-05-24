@@ -30,7 +30,7 @@ webphoto_include_once( 'class/main/mail_retrieve.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_mail_retrieve::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_mail_retrieve::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 
 // exit if false
 $manage->check();

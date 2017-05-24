@@ -146,23 +146,23 @@ function webphoto_show_main( $dirname, $trust_dirname )
 	$this->webphoto_show_photo( $dirname, $trust_dirname );
 
 	$this->_user_handler     
-		=& webphoto_user_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_user_handler::getInstance( $dirname, $trust_dirname );
 	$this->_page_class       
-		=& webphoto_page::getInstance( $dirname , $trust_dirname );
+		= webphoto_page::getInstance( $dirname , $trust_dirname );
 	$this->_gmap_class       
-		=& webphoto_gmap::getInstance( $dirname , $trust_dirname );
+		= webphoto_gmap::getInstance( $dirname , $trust_dirname );
 	$this->_rate_check_class 
-		=& webphoto_rate_check::getInstance( $dirname, $trust_dirname );
+		= webphoto_rate_check::getInstance( $dirname, $trust_dirname );
 	$this->_public_class     
-		=& webphoto_photo_public::getInstance( $dirname, $trust_dirname  );
+		= webphoto_photo_public::getInstance( $dirname, $trust_dirname  );
 
-	$this->_header_class     =& webphoto_xoops_header::getInstance( $dirname );
-	$this->_pathinfo_class   =& webphoto_lib_pathinfo::getInstance();
+	$this->_header_class     = webphoto_xoops_header::getInstance( $dirname );
+	$this->_pathinfo_class   = webphoto_lib_pathinfo::getInstance();
 
-	$this->_notification_select_class =& webphoto_d3_notification_select::getInstance();
+	$this->_notification_select_class = webphoto_d3_notification_select::getInstance();
 	$this->_notification_select_class->init( $dirname ); 
 
-	$this->_pagenavi_class =& webphoto_lib_pagenavi::getInstance();
+	$this->_pagenavi_class = webphoto_lib_pagenavi::getInstance();
 	$this->_pagenavi_class->set_mark_id_prev( '<b>'. $this->get_constant('NAVI_PREVIOUS') .'</b>' );
 	$this->_pagenavi_class->set_mark_id_next( '<b>'. $this->get_constant('NAVI_NEXT') .'</b>' );
 
@@ -174,7 +174,7 @@ function webphoto_show_main( $dirname, $trust_dirname )
 
 	$this->_use_box_js = $this->_page_class->get_use_box_js();
 
-	$this->_sort_class =& webphoto_photo_sort::getInstance( $dirname, $trust_dirname );
+	$this->_sort_class = webphoto_photo_sort::getInstance( $dirname, $trust_dirname );
 	$this->_sort_class->set_photo_sort_default( $this->_cfg_sort );
 
 // separator
@@ -208,7 +208,7 @@ function init_preload()
 
 	$this->_page_class->init_preload();
 
-	$this->_timeline_class =& webphoto_timeline::getInstance( $this->_DIRNAME );
+	$this->_timeline_class = webphoto_timeline::getInstance( $this->_DIRNAME );
 	$this->_init_timeline = $this->_timeline_class->init( $this->_cfg_timeline_dirname );
 }
 

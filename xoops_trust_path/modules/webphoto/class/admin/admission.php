@@ -38,8 +38,8 @@ function webphoto_admin_admission( $dirname , $trust_dirname )
 // use delete_photo
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_notification_class =& webphoto_notification_event::getInstance( $dirname , $trust_dirname );
-	$this->_delete_class  =& webphoto_photo_delete::getInstance( $dirname );
+	$this->_notification_class = webphoto_notification_event::getInstance( $dirname , $trust_dirname );
+	$this->_delete_class  = webphoto_photo_delete::getInstance( $dirname );
 
 	$this->_ADIMISSION_PHP = $this->_MODULE_URL .'/admin/index.php?fct=admission';
 }
@@ -147,12 +147,12 @@ function _print_form()
 
 
 // Page Navigation
-	$pagenavi_class =& webphoto_lib_pagenavi::getInstance();
+	$pagenavi_class = webphoto_lib_pagenavi::getInstance();
 	$extra = "fct=admission&txt=". urlencode( $this->_get_txt );
 	$pagenavi_class->XoopsPageNav( $photo_count, $this->_PERPAGE , $this->_get_pos , 'pos' , $extra ) ;
 	$navi = $pagenavi_class->renderNav( 10 ) ;
 
-	$form_class =& webphoto_admin_admission_form::getInstance(
+	$form_class = webphoto_admin_admission_form::getInstance(
 		$this->_DIRNAME, $this->_TRUST_DIRNAME  );
 
 	echo '<div style="margin:3px; text-align:right">';

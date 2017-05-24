@@ -29,7 +29,7 @@ function webphoto_admin_test( $dirname, $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname, $trust_dirname );
 
-	$this->_class_dir =& webphoto_lib_dir::getInstance();
+	$this->_class_dir = webphoto_lib_dir::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

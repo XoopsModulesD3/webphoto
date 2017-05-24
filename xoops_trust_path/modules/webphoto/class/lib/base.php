@@ -94,8 +94,8 @@ function webphoto_lib_base( $dirname, $trust_dirname )
 {
 	$this->webphoto_lib_error();
 
-	$this->_xoops_class   =& webphoto_xoops_base::getInstance();
-	$this->_utility_class =& webphoto_lib_utility::getInstance();
+	$this->_xoops_class   = webphoto_xoops_base::getInstance();
+	$this->_utility_class = webphoto_lib_utility::getInstance();
 
 // each msg box
 	$this->_msg_class = new webphoto_lib_msg();
@@ -164,7 +164,7 @@ function build_admin_bread_crumb( $title, $url )
 
 function build_admin_menu()
 {
-	$menu_class =& webphoto_lib_admin_menu::getInstance(
+	$menu_class = webphoto_lib_admin_menu::getInstance(
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	return $menu_class->build_menu_with_sub( $this->_FLAG_ADMIN_SUB_MENU );
@@ -618,7 +618,7 @@ function format_timestamp( $time, $format="l", $timeoffset="" )
 //---------------------------------------------------------
 function _init_d3_language( $dirname, $trust_dirname )
 {
-	$this->_language_class =& webphoto_d3_language::getInstance();
+	$this->_language_class = webphoto_d3_language::getInstance();
 	$this->_language_class->init( $dirname , $trust_dirname );
 }
 

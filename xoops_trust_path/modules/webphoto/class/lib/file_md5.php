@@ -30,7 +30,7 @@ function webphoto_lib_file_md5( $dirname , $trust_dirname )
 	$this->_TRUST_DIRNAME = $trust_dirname;
 	$this->_TRUST_DIR     = XOOPS_TRUST_PATH .'/modules/'. $trust_dirname;
 
-	$this->_dir_class =& webphoto_lib_dir::getInstance();
+	$this->_dir_class = webphoto_lib_dir::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

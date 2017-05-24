@@ -60,13 +60,13 @@ function webphoto_admin_giconmanager( $dirname , $trust_dirname )
 	$this->webphoto_edit_base( $dirname , $trust_dirname );
 
 	$this->_gicon_handler 
-		=& webphoto_gicon_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_gicon_handler::getInstance( $dirname , $trust_dirname );
 	$this->_upload_class  
-		=& webphoto_upload::getInstance( $dirname , $trust_dirname );
+		= webphoto_upload::getInstance( $dirname , $trust_dirname );
 	$this->_mime_class    
-		=& webphoto_mime::getInstance( $dirname , $trust_dirname  );
+		= webphoto_mime::getInstance( $dirname , $trust_dirname  );
 	$this->_gicon_create_class 
-		=& webphoto_edit_gicon_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_gicon_create::getInstance( $dirname , $trust_dirname );
 
 	$this->_ERR_ALLOW_EXTS = 'allowed file type is '. implode( ',' , $this->get_normal_exts() ) ;
 
@@ -544,14 +544,14 @@ function _print_list()
 //---------------------------------------------------------
 function _print_gicon_form( $mode , $row )
 {
-	$form =& webphoto_admin_gicon_form::getInstance( 
+	$form = webphoto_admin_gicon_form::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$form->print_form( $mode, $row );
 }
 
 function _print_gicon_list( $rows )
 {
-	$form =& webphoto_admin_gicon_form::getInstance( 
+	$form = webphoto_admin_gicon_form::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$form->print_list( $rows );
 }

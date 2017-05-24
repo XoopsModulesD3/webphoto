@@ -19,7 +19,7 @@ webphoto_include_once( 'class/admin/create_md5.php' );
 //=========================================================
 // main
 //=========================================================
-$manager =& webphoto_admin_create_md5::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manager = webphoto_admin_create_md5::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manager->main();
 exit();
 

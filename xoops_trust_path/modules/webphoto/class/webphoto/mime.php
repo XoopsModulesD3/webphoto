@@ -63,7 +63,7 @@ function webphoto_mime( $dirname, $trust_dirname )
 {
 	$this->webphoto_base_ini( $dirname, $trust_dirname );
 
-	$this->_mime_handler  =& webphoto_mime_handler::getInstance(
+	$this->_mime_handler  = webphoto_mime_handler::getInstance(
 		$dirname, $trust_dirname );
 
 	$this->_mime_kind_image_array  = $this->explode_ini( 'mime_kind_list_image' );

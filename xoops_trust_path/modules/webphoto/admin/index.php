@@ -61,7 +61,7 @@ webphoto_include_once( 'class/admin/index.php' );
 //=========================================================
 // main
 //=========================================================
-$manager =& webphoto_admin_index::getInstance( 
+$manager = webphoto_admin_index::getInstance( 
 	WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manager->main();
 exit();

@@ -75,22 +75,22 @@ function webphoto_import( $dirname , $trust_dirname )
 	$this->_item_handler->set_debug_error( 1 );
 	$this->_item_handler->set_debug_sql_by_const_name( $CONST_DEBUG_SQL );
 
-	$this->_vote_handler  =& webphoto_vote_handler::getInstance( $dirname );
+	$this->_vote_handler  = webphoto_vote_handler::getInstance( $dirname );
 	$this->_vote_handler->set_debug_error( 1 );
 	$this->_vote_handler->set_debug_sql_by_const_name( $CONST_DEBUG_SQL );
 
-	$this->_xoops_comments_handler =& webphoto_xoops_comments_handler::getInstance();
+	$this->_xoops_comments_handler = webphoto_xoops_comments_handler::getInstance();
 	$this->_xoops_comments_handler->set_debug_error( 1 );
 	$this->_xoops_comments_handler->set_debug_sql_by_const_name( $CONST_DEBUG_SQL );
 
-	$this->_myalbum_handler =& webphoto_myalbum_handler::getInstance();
+	$this->_myalbum_handler = webphoto_myalbum_handler::getInstance();
 	$this->_myalbum_handler->set_debug_error( 1 );
 	$this->_myalbum_handler->set_debug_sql_by_const_name( $CONST_DEBUG_SQL );
 
-	$this->_photo_class =& webphoto_photo_create::getInstance( $dirname , $trust_dirname );
+	$this->_photo_class = webphoto_photo_create::getInstance( $dirname , $trust_dirname );
 	$this->_photo_class->set_msg_level( _C_WEBPHOTO_MSG_LEVEL_ADMIN );
 
-	$this->_build_class =& webphoto_photo_build::getInstance( $dirname );
+	$this->_build_class = webphoto_photo_build::getInstance( $dirname );
 
 	$this->_ICON_EXT_DIR = $this->_MODULE_DIR .'/images/exts';
 	$this->_ICON_EXT_URL = $this->_MODULE_URL .'/images/exts';

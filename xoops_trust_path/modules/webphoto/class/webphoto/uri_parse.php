@@ -23,10 +23,10 @@ class webphoto_uri_parse
 function webphoto_uri_parse( $dirname, $trust_dirname )
 {
 	$this->_sort_class 
-		=& webphoto_photo_sort::getInstance( $dirname, $trust_dirname );
+		= webphoto_photo_sort::getInstance( $dirname, $trust_dirname );
 
-	$this->_xoops_class    =& webphoto_xoops_base::getInstance();
-	$this->_pathinfo_class =& webphoto_lib_pathinfo::getInstance();
+	$this->_xoops_class    = webphoto_xoops_base::getInstance();
+	$this->_pathinfo_class = webphoto_lib_pathinfo::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

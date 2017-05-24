@@ -107,11 +107,11 @@ function webphoto_form_this( $dirname , $trust_dirname )
 {
 	$this->webphoto_lib_form( $dirname , $trust_dirname );
 
-	$this->_config_class =& webphoto_config::getInstance( $dirname );
-	$this->_item_handler =& webphoto_item_handler::getInstance( $dirname );
-	$this->_file_handler =& webphoto_file_handler::getInstance( $dirname );
-	$this->_cat_handler  =& webphoto_cat_handler::getInstance(   $dirname );
-	$this->_perm_class   =& webphoto_permission::getInstance( $dirname );
+	$this->_config_class = webphoto_config::getInstance( $dirname );
+	$this->_item_handler = webphoto_item_handler::getInstance( $dirname );
+	$this->_file_handler = webphoto_file_handler::getInstance( $dirname );
+	$this->_cat_handler  = webphoto_cat_handler::getInstance(   $dirname );
+	$this->_perm_class   = webphoto_permission::getInstance( $dirname );
 
 	$this->_cfg_gmap_apikey    = $this->_config_class->get_by_name( 'gmap_apikey' );
 	$this->_cfg_width          = $this->_config_class->get_by_name( 'width' );
@@ -483,7 +483,7 @@ function init_preload()
 
 function preload_init()
 {
-	$this->_preload_class =& webphoto_d3_preload::getInstance();
+	$this->_preload_class = webphoto_d3_preload::getInstance();
 	$this->_preload_class->init( $this->_DIRNAME , $this->_TRUST_DIRNAME );
 }
 

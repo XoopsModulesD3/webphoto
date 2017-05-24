@@ -33,7 +33,7 @@ webphoto_include_once( 'class/admin/batch.php' );
 //=========================================================
 // main
 //=========================================================
-$manager =& webphoto_admin_batch::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manager = webphoto_admin_batch::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manager->main();
 exit();
 

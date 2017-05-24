@@ -33,8 +33,8 @@ function webphoto_notification_event( $dirname , $trust_dirname )
 	$this->init( $dirname , $trust_dirname );
 
 	$this->_cat_handler  
-		=& webphoto_cat_handler::getInstance( $dirname , $trust_dirname );
-	$this->_uri_class =& webphoto_uri::getInstance( $dirname );
+		= webphoto_cat_handler::getInstance( $dirname , $trust_dirname );
+	$this->_uri_class = webphoto_uri::getInstance( $dirname );
 
 }
 

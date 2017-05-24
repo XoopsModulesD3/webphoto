@@ -46,18 +46,18 @@ function webphoto_edit_item_delete( $dirname , $trust_dirname )
 	$this->webphoto_lib_error();
 
 	$this->_item_handler      
-		=& webphoto_item_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_item_handler::getInstance( $dirname , $trust_dirname );
 	$this->_file_handler      
-		=& webphoto_file_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_file_handler::getInstance( $dirname , $trust_dirname );
 	$this->_vote_handler      
-		=& webphoto_vote_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_vote_handler::getInstance( $dirname , $trust_dirname );
 	$this->_p2t_handler       
-		=& webphoto_p2t_handler::getInstance(  $dirname , $trust_dirname );
+		= webphoto_p2t_handler::getInstance(  $dirname , $trust_dirname );
 	$this->_maillog_handler   
-		=& webphoto_maillog_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_maillog_handler::getInstance( $dirname , $trust_dirname );
 
-	$this->_mail_unlink_class =& webphoto_edit_mail_unlink::getInstance( $dirname );
-	$this->_utility_class =& webphoto_lib_utility::getInstance();
+	$this->_mail_unlink_class = webphoto_edit_mail_unlink::getInstance( $dirname );
+	$this->_utility_class = webphoto_lib_utility::getInstance();
 
 	$this->_init_xoops_param();
 }

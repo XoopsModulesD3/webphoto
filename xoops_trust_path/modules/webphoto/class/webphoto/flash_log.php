@@ -46,8 +46,8 @@ class webphoto_flash_log
 //---------------------------------------------------------
 function webphoto_flash_log( $dirname )
 {
-	$this->_utility_class =& webphoto_lib_utility::getInstance();
-	$this->_post_class    =& webphoto_lib_post::getInstance();
+	$this->_utility_class = webphoto_lib_utility::getInstance();
+	$this->_post_class    = webphoto_lib_post::getInstance();
 
 	$this->_init_xoops_config( $dirname );
 

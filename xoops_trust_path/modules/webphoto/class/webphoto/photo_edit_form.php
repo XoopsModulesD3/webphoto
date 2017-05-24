@@ -101,13 +101,13 @@ function webphoto_photo_edit_form( $dirname, $trust_dirname )
 {
 	$this->webphoto_form_this( $dirname, $trust_dirname );
 
-	$this->_embed_class    =& webphoto_embed::getInstance( $dirname, $trust_dirname );
-	$this->_editor_class   =& webphoto_editor::getInstance( $dirname, $trust_dirname );
-	$this->_gicon_handler  =& webphoto_gicon_handler::getInstance( $dirname );
-	$this->_player_handler =& webphoto_player_handler::getInstance( $dirname );
-	$this->_kind_class     =& webphoto_kind::getInstance();
+	$this->_embed_class    = webphoto_embed::getInstance( $dirname, $trust_dirname );
+	$this->_editor_class   = webphoto_editor::getInstance( $dirname, $trust_dirname );
+	$this->_gicon_handler  = webphoto_gicon_handler::getInstance( $dirname );
+	$this->_player_handler = webphoto_player_handler::getInstance( $dirname );
+	$this->_kind_class     = webphoto_kind::getInstance();
 
-	$this->_tag_class =& webphoto_tag::getInstance( $dirname );
+	$this->_tag_class = webphoto_tag::getInstance( $dirname );
 	$this->_tag_class->set_is_japanese( $this->_is_japanese );
 
 	$this->_ICON_ROTATE_URL = $this->_MODULE_URL .'/images/uploader';

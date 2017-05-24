@@ -22,7 +22,7 @@ function webphoto_admin_create_md5( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_file_md5_class =& webphoto_lib_file_md5::getInstance(
+	$this->_file_md5_class = webphoto_lib_file_md5::getInstance(
 		$dirname , $trust_dirname );
 }
 

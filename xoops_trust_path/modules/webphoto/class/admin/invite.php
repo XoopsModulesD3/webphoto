@@ -41,10 +41,10 @@ function webphoto_admin_invite( $dirname , $trust_dirname )
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
 	$this->_mail_template_class 
-		=& webphoto_d3_mail_template::getInstance( $dirname , $trust_dirname );
+		= webphoto_d3_mail_template::getInstance( $dirname , $trust_dirname );
 
-	$this->_mail_send_class  =& webphoto_lib_mail_send::getInstance();
-	$this->_msg_class        =& webphoto_lib_msg::getInstance();
+	$this->_mail_send_class  = webphoto_lib_mail_send::getInstance();
+	$this->_msg_class        = webphoto_lib_msg::getInstance();
 
 	$this->_xoops_user_email = $this->_xoops_class->get_my_user_value_by_name( 'email', 'n' );
 	$this->_xoops_user_name  = $this->_xoops_class->get_user_uname_from_id( $this->_xoops_uid, 1 );

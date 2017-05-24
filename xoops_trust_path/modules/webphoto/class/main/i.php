@@ -45,7 +45,7 @@ function webphoto_main_i( $dirname , $trust_dirname )
 
 	$this->_cfg_gmap_apikey = $this->get_config_by_name( 'gmap_apikey' );
 
-	$this->_staticmap_class =& webphoto_lib_staticmap::getInstance();
+	$this->_staticmap_class = webphoto_lib_staticmap::getInstance();
 	$this->_staticmap_class->set_key( $this->_cfg_gmap_apikey );
 
 // preload

@@ -117,8 +117,8 @@ function webphoto_inc_blocks( $dirname , $trust_dirname )
 	$this->_header_class     =& webphoto_inc_xoops_header::getSingleton( $dirname );
 	$this->_gmap_block_class =& webphoto_inc_gmap_block::getSingleton( $dirname );
 	$this->_uri_class        =& webphoto_inc_uri::getSingleton( $dirname );
-	$this->_utility_class    =& webphoto_lib_utility::getInstance();
-	$this->_multibyte_class  =& webphoto_lib_multibyte::getInstance();
+	$this->_utility_class    = webphoto_lib_utility::getInstance();
+	$this->_multibyte_class  = webphoto_lib_multibyte::getInstance();
 
 	$this->_timeline_class   =& webphoto_inc_timeline::getSingleton( $dirname );
 	$this->_init_timeline    =  $this->_timeline_class->init( $this->_cfg_timeline_dirname );

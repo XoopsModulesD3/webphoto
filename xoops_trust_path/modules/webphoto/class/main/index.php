@@ -66,22 +66,22 @@ function webphoto_main_index( $dirname , $trust_dirname )
 	$this->webphoto_factory( $dirname , $trust_dirname );
 
 	$this->_main_class 
-		=& webphoto_main::getInstance( $dirname , $trust_dirname );
+		= webphoto_main::getInstance( $dirname , $trust_dirname );
 
 	$this->_date_class 
-		=& webphoto_date::getInstance( $dirname , $trust_dirname );
+		= webphoto_date::getInstance( $dirname , $trust_dirname );
 
 	$this->_place_class 
-		=& webphoto_place::getInstance( $dirname , $trust_dirname );
+		= webphoto_place::getInstance( $dirname , $trust_dirname );
 
 	$this->_tag_class 
-		=& webphoto_tag::getInstance( $dirname , $trust_dirname );
+		= webphoto_tag::getInstance( $dirname , $trust_dirname );
 
 	$this->_user_class 
-		=& webphoto_user::getInstance( $dirname , $trust_dirname );
+		= webphoto_user::getInstance( $dirname , $trust_dirname );
 
 	$this->_search_class 
-		=& webphoto_search::getInstance( $dirname , $trust_dirname );
+		= webphoto_search::getInstance( $dirname , $trust_dirname );
 
 	$this->set_template_main( 'main_index.html' );
 

@@ -37,19 +37,19 @@ function webphoto_main_flash_config( $dirname , $trust_dirname )
 	$this->webphoto_item_public( $dirname, $trust_dirname );
 
 	$this->_file_handler     
-		=& webphoto_file_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_file_handler::getInstance( $dirname, $trust_dirname );
 	$this->_player_handler   
-		=& webphoto_player_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_player_handler::getInstance( $dirname, $trust_dirname );
 	$this->_flashvar_handler 
-		=& webphoto_flashvar_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_flashvar_handler::getInstance( $dirname, $trust_dirname );
 	$this->_player_clss      
-		=& webphoto_flash_player::getInstance( $dirname, $trust_dirname );
+		= webphoto_flash_player::getInstance( $dirname, $trust_dirname );
 	$this->_playlist_class   
-		=& webphoto_playlist::getInstance( $dirname, $trust_dirname );
+		= webphoto_playlist::getInstance( $dirname, $trust_dirname );
 
-	$this->_post_class       =& webphoto_lib_post::getInstance();
-	$this->_xml_class        =& webphoto_lib_xml::getInstance();
-	$this->_multibyte_class  =& webphoto_lib_multibyte::getInstance();
+	$this->_post_class       = webphoto_lib_post::getInstance();
+	$this->_xml_class        = webphoto_lib_xml::getInstance();
+	$this->_multibyte_class  = webphoto_lib_multibyte::getInstance();
 
 }
 

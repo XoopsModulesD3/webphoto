@@ -25,7 +25,7 @@ function webphoto_admin_update_210( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_form_class =& webphoto_lib_form::getInstance(   $dirname , $trust_dirname );
+	$this->_form_class = webphoto_lib_form::getInstance(   $dirname , $trust_dirname );
 
 	$this->_item_handler->set_debug_error( true );
 

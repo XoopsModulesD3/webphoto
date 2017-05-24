@@ -56,7 +56,7 @@ function webphoto_inc_timeline( $dirname )
 
 	$this->_IMAGE_EXTS = explode( '|', _C_WEBPHOTO_IMAGE_EXTS );
 
-	$this->_mysql_utility_class =& webphoto_lib_mysql_utility::getInstance();
+	$this->_mysql_utility_class = webphoto_lib_mysql_utility::getInstance();
 }
 
 public static function &getSingleton( $dirname )

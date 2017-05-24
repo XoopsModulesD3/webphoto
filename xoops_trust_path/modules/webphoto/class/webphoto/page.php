@@ -44,7 +44,7 @@ function webphoto_page( $dirname, $trust_dirname )
 
 	$this->_timeline_class =& webphoto_inc_timeline::getSingleton( $dirname );
 	$this->_public_class   
-		=& webphoto_photo_public::getInstance( $dirname, $trust_dirname );
+		= webphoto_photo_public::getInstance( $dirname, $trust_dirname );
 
 	$this->_cfg_file_dir     = $this->_config_class->get_by_name('file_dir') ;
 	$this->_cfg_is_set_mail  = $this->_config_class->is_set_mail() ;
@@ -322,7 +322,7 @@ function build_box_list( $param )
 //---------------------------------------------------------
 function init_preload()
 {
-	$this->_preload_class =& webphoto_d3_preload::getInstance();
+	$this->_preload_class = webphoto_d3_preload::getInstance();
 	$this->_preload_class->init( $this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	$this->preload_constant();
@@ -360,7 +360,7 @@ function preload_constant()
 //---------------------------------------------------------
 function _init_d3_language( $dirname, $trust_dirname )
 {
-	$this->_language_class =& webphoto_d3_language::getInstance();
+	$this->_language_class = webphoto_d3_language::getInstance();
 	$this->_language_class->init( $dirname , $trust_dirname );
 }
 

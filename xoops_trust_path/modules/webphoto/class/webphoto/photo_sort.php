@@ -56,7 +56,7 @@ class webphoto_photo_sort
 //---------------------------------------------------------
 function webphoto_photo_sort( $dirname, $trust_dirname )
 {
-	$this->_config_class =& webphoto_config::getInstance( $dirname );
+	$this->_config_class = webphoto_config::getInstance( $dirname );
 
 	$this->_ini_class 
 		=& webphoto_inc_ini::getSingleton( $dirname, $trust_dirname );
@@ -297,7 +297,7 @@ function convert_orderby_join( $str )
 //---------------------------------------------------------
 function _init_d3_language( $dirname, $trust_dirname )
 {
-	$this->_language_class =& webphoto_d3_language::getInstance();
+	$this->_language_class = webphoto_d3_language::getInstance();
 	$this->_language_class->init( $dirname , $trust_dirname );
 }
 

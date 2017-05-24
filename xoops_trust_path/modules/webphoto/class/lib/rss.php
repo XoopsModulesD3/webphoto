@@ -83,7 +83,7 @@ function webphoto_lib_rss( $dirname )
 {
 	$this->webphoto_lib_xml();
 
-	$this->_multibyte_class =& webphoto_lib_multibyte::getInstance();
+	$this->_multibyte_class = webphoto_lib_multibyte::getInstance();
 
 	$this->_DIRNAME     = $dirname;
 	$this->_MODULE_PATH = XOOPS_ROOT_PATH .'/modules/'. $dirname;
@@ -313,7 +313,7 @@ function utf8_array( $arr_in )
 //---------------------------------------------------------
 function _init_xoops_param()
 {
-	$xoops_class =& webphoto_xoops_base::getInstance();
+	$xoops_class = webphoto_xoops_base::getInstance();
 
 	$this->_xoops_language  = $xoops_class->get_config_by_name( 'language' );
 	$this->_xoops_sitename  = $xoops_class->get_config_by_name( 'sitename' );

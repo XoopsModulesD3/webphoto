@@ -77,31 +77,31 @@ function webphoto_factory( $dirname, $trust_dirname )
 	$this->webphoto_base_this( $dirname, $trust_dirname );
 
 	$this->_photo_class 
-		=& webphoto_photo::getInstance( $dirname , $trust_dirname );
+		= webphoto_photo::getInstance( $dirname , $trust_dirname );
 	$this->_category_class 
-		=& webphoto_category::getInstance( $dirname , $trust_dirname );
+		= webphoto_category::getInstance( $dirname , $trust_dirname );
 	$this->_header_class
-		=& webphoto_xoops_header::getInstance( $dirname, $trust_dirname );
+		= webphoto_xoops_header::getInstance( $dirname, $trust_dirname );
 	$this->_page_class
-		=& webphoto_page::getInstance( $dirname , $trust_dirname );
+		= webphoto_page::getInstance( $dirname , $trust_dirname );
 	$this->_gmap_class
-		=& webphoto_gmap::getInstance( $dirname , $trust_dirname );
+		= webphoto_gmap::getInstance( $dirname , $trust_dirname );
 	$this->_qr_class
-		=& webphoto_qr::getInstance( $dirname , $trust_dirname );
+		= webphoto_qr::getInstance( $dirname , $trust_dirname );
 	$this->_public_class
-		=& webphoto_photo_public::getInstance( $dirname, $trust_dirname );
+		= webphoto_photo_public::getInstance( $dirname, $trust_dirname );
 	$this->_pagenavi_class 
-		=& webphoto_pagenavi::getInstance( $dirname, $trust_dirname );
+		= webphoto_pagenavi::getInstance( $dirname, $trust_dirname );
 	$this->_timeline_class 
-		=& webphoto_timeline::getInstance( $dirname, $trust_dirname );
+		= webphoto_timeline::getInstance( $dirname, $trust_dirname );
 	$this->_notification_select_class 
-		=& webphoto_notification_select::getInstance( $dirname );
+		= webphoto_notification_select::getInstance( $dirname );
 	$this->_sort_class 
-		=& webphoto_photo_sort::getInstance( $dirname, $trust_dirname );
+		= webphoto_photo_sort::getInstance( $dirname, $trust_dirname );
 	$this->_tagcloud_class 
 		=& webphoto_inc_tagcloud::getSingleton( $dirname, $trust_dirname );
 	$this->_uri_parse_class 
-		=& webphoto_uri_parse::getInstance( $dirname, $trust_dirname );
+		= webphoto_uri_parse::getInstance( $dirname, $trust_dirname );
 
 	$this->_auto_publish_class 
 		=& webphoto_inc_auto_publish::getSingleton( $dirname, $trust_dirname  );

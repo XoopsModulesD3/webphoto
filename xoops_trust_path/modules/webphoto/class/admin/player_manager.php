@@ -52,13 +52,13 @@ function webphoto_admin_player_manager( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_flashvar_handler =& webphoto_flashvar_handler::getInstance( 
+	$this->_flashvar_handler = webphoto_flashvar_handler::getInstance( 
 		$dirname, $trust_dirname );
-	$this->_player_handler   =& webphoto_player_handler::getInstance( 
+	$this->_player_handler   = webphoto_player_handler::getInstance( 
 		$dirname, $trust_dirname  );
-	$this->_playlist_class   =& webphoto_playlist::getInstance( 
+	$this->_playlist_class   = webphoto_playlist::getInstance( 
 		$dirname, $trust_dirname );
-	$this->_player_class     =& webphoto_flash_player::getInstance( 
+	$this->_player_class     = webphoto_flash_player::getInstance( 
 		$dirname , $trust_dirname  );
 
 	$this->_THIS_URL = $this->_MODULE_URL .'/admin/index.php?fct='.$this->_THIS_FCT;
@@ -213,7 +213,7 @@ function _print_form_common( $mode, $row )
 
 function _print_player_table( $mode, $player_row )
 {
-	$form =& webphoto_admin_player_form::getInstance( 
+	$form = webphoto_admin_player_form::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$form->set_path_color_pickup( $this->_MODULE_URL.'/libs' );
 
@@ -454,7 +454,7 @@ function _delete()
 
 function _delete_comfirm()
 {
-	$form_class =& webphoto_admin_player_form::getInstance( 
+	$form_class = webphoto_admin_player_form::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
  	$hiddens = array(

@@ -67,20 +67,20 @@ function webphoto_show_main_photo( $dirname , $trust_dirname )
 	$this->webphoto_show_main( $dirname , $trust_dirname );
 
 	$this->_flash_class       
-		=& webphoto_flash_player::getInstance( $dirname, $trust_dirname  );
+		= webphoto_flash_player::getInstance( $dirname, $trust_dirname  );
 	$this->_embed_class       
-		=& webphoto_embed::getInstance( $dirname, $trust_dirname );
+		= webphoto_embed::getInstance( $dirname, $trust_dirname );
 	$this->_item_public_class 
-		=& webphoto_item_public::getInstance( $dirname, $trust_dirname );
+		= webphoto_item_public::getInstance( $dirname, $trust_dirname );
 	$this->_photo_navi_class 
-		=& webphoto_photo_navi::getInstance( $dirname , $trust_dirname );
+		= webphoto_photo_navi::getInstance( $dirname , $trust_dirname );
 	$this->_catlist_class  
 		=& webphoto_inc_catlist::getSingleton( $dirname , $trust_dirname );
 
 	$this->_photo_navi_class->set_mark_id_prev( '<b>'. $this->get_constant('NAVI_PREVIOUS') .'</b>' );
 	$this->_photo_navi_class->set_mark_id_next( '<b>'. $this->get_constant('NAVI_NEXT') .'</b>' );
 
-	$this->_comment_view_class =& webphoto_d3_comment_view::getInstance();
+	$this->_comment_view_class = webphoto_d3_comment_view::getInstance();
 	$this->_comment_view_class->init( $dirname );
 
 	$this->_cfg_cat_child = $this->_config_class->get_by_name( 'cat_child' );

@@ -69,9 +69,9 @@ function webphoto_video( $dirname )
 {
 	$this->webphoto_lib_error();
 
-	$this->_mime_handler  =& webphoto_mime_handler::getInstance( $dirname );
-	$this->_config_class  =& webphoto_config::getInstance( $dirname );
-	$this->_utility_class =& webphoto_lib_utility::getInstance();
+	$this->_mime_handler  = webphoto_mime_handler::getInstance( $dirname );
+	$this->_config_class  = webphoto_config::getInstance( $dirname );
+	$this->_utility_class = webphoto_lib_utility::getInstance();
 
 	$uploads_path = $this->_config_class->get_uploads_path();
 	$work_dir     = $this->_config_class->get_by_name( 'workdir' );
@@ -82,7 +82,7 @@ function webphoto_video( $dirname )
 	$cfg_ffmpegpath        = $this->_config_class->get_dir_by_name( 'ffmpegpath' );
 	$this->_cfg_use_ffmpeg = $this->_config_class->get_by_name( 'use_ffmpeg' );
 
-	$this->_ffmpeg_class =& webphoto_lib_ffmpeg::getInstance();
+	$this->_ffmpeg_class = webphoto_lib_ffmpeg::getInstance();
 	$this->_ffmpeg_class->set_tmp_path( $this->_TMP_DIR );
 	$this->_ffmpeg_class->set_cmd_path( $cfg_ffmpegpath );
 	$this->_ffmpeg_class->set_ext( $this->_THUMB_EXT );

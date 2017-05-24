@@ -36,7 +36,7 @@ webphoto_include_once( 'class/admin/admission.php' );
 //=========================================================
 // main
 //=========================================================
-$manager =& webphoto_admin_admission::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manager = webphoto_admin_admission::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manager->main();
 exit();
 

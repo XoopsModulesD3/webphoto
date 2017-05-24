@@ -56,7 +56,7 @@ if( ! empty( $_GET['lib'] ) ) {
 	}
 
 	require_once( $langmanpath ) ;
-	$langman =& D3LanguageManager::getInstance() ;
+	$langman = D3LanguageManager::getInstance() ;
 
 	// common libs (eg. altsys)
 	$lib  = preg_replace( '/[^a-zA-Z0-9_-]/' , '' , $_GET['lib'] ) ;

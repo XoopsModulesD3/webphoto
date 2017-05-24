@@ -22,7 +22,7 @@ webphoto_include_once( 'class/main/gmap_location.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_gmap_location::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_gmap_location::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manage->main();
 exit();
 

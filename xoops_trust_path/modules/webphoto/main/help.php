@@ -25,7 +25,7 @@ webphoto_include_once( 'class/main/help.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_help::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_help::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 
 $xoopsOption['template_main'] = WEBPHOTO_DIRNAME.'_main_help.html' ;
 include XOOPS_ROOT_PATH . '/header.php' ;

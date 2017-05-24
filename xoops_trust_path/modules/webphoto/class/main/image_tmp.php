@@ -34,9 +34,9 @@ class webphoto_main_image_tmp
 //---------------------------------------------------------
 function webphoto_main_image_tmp( $dirname, $trust_dirname )
 {
-	$this->_config_class   =& webphoto_config::getInstance( $dirname );
-	$this->_post_class     =& webphoto_lib_post::getInstance();
-	$this->_readfile_class =& webphoto_lib_readfile::getInstance();
+	$this->_config_class   = webphoto_config::getInstance( $dirname );
+	$this->_post_class     = webphoto_lib_post::getInstance();
+	$this->_readfile_class = webphoto_lib_readfile::getInstance();
 
 	$work_dir        = $this->_config_class->get_by_name( 'workdir' );
 	$this->_TMP_DIR  = $work_dir.'/tmp' ;

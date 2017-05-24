@@ -91,7 +91,7 @@ function webphoto_admin_item_form( $dirname, $trust_dirname )
 	$this->webphoto_edit_photo_form( $dirname, $trust_dirname );
 
 	$this->_sort_class 
-		=& webphoto_photo_sort::getInstance( $dirname, $trust_dirname );
+		= webphoto_photo_sort::getInstance( $dirname, $trust_dirname );
 
 	$this->_sort_class->init_for_admin();
 

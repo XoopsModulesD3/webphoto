@@ -48,15 +48,15 @@ function webphoto_edit_search_build( $dirname , $trust_dirname )
 	$this->_MODULE_DIR = XOOPS_ROOT_PATH .'/modules/'. $dirname;
 
 	$this->_item_handler  
-		=& webphoto_item_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_item_handler::getInstance( $dirname , $trust_dirname );
 	$this->_cat_handler   
-		=& webphoto_cat_handler::getInstance(  $dirname , $trust_dirname  );
+		= webphoto_cat_handler::getInstance(  $dirname , $trust_dirname  );
 	$this->_file_handler  
-		=& webphoto_file_handler::getInstance( $dirname , $trust_dirname  );
+		= webphoto_file_handler::getInstance( $dirname , $trust_dirname  );
 	$this->_syno_handler  
-		=& webphoto_syno_handler::getInstance( $dirname , $trust_dirname  );
+		= webphoto_syno_handler::getInstance( $dirname , $trust_dirname  );
 	$this->_tag_build_class     
-		=& webphoto_tag_build::getInstance( $dirname , $trust_dirname );
+		= webphoto_tag_build::getInstance( $dirname , $trust_dirname );
 
 }
 

@@ -33,9 +33,9 @@ function webphoto_admin_maillog_form( $dirname , $trust_dirname )
 	$this->webphoto_edit_form( $dirname , $trust_dirname );
 
 	$this->_maillog_handler 
-		=& webphoto_maillog_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_maillog_handler::getInstance( $dirname, $trust_dirname );
 
-	$this->_cat_selbox_class =& webphoto_cat_selbox::getInstance();
+	$this->_cat_selbox_class = webphoto_cat_selbox::getInstance();
 	$this->_cat_selbox_class->init( $dirname , $trust_dirname );
 
 }

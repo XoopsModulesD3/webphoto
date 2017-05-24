@@ -43,9 +43,9 @@ function webphoto_admin_update_130( $dirname , $trust_dirname )
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
 	$this->_item_create_class  
-		=& webphoto_edit_item_create::getInstance( $dirname , $trust_dirname  );
-	$this->_form_class =& webphoto_lib_form::getInstance(   $dirname , $trust_dirname );
-	$this->_small_create_class =& webphoto_edit_small_create::getInstance( $dirname );
+		= webphoto_edit_item_create::getInstance( $dirname , $trust_dirname  );
+	$this->_form_class = webphoto_lib_form::getInstance(   $dirname , $trust_dirname );
+	$this->_small_create_class = webphoto_edit_small_create::getInstance( $dirname );
 
 	$this->_item_create_class->set_debug_error( true );
 	$this->_file_handler->set_debug_error( true );

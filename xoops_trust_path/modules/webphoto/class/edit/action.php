@@ -78,9 +78,9 @@ function webphoto_edit_action( $dirname , $trust_dirname )
 	$this->webphoto_edit_submit( $dirname , $trust_dirname );
 
 	$this->_delete_class 
-		=& webphoto_edit_item_delete::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_item_delete::getInstance( $dirname , $trust_dirname );
 	$this->_file_action_class   
-		=& webphoto_edit_file_action::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_file_action::getInstance( $dirname , $trust_dirname );
 }
 
 // for admin_photo_manage admin_catmanager

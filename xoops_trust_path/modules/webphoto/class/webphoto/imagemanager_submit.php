@@ -101,16 +101,16 @@ function webphoto_imagemanager_submit( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_photo_class    =& webphoto_photo_create::getInstance( $dirname , $trust_dirname );
-	$this->_build_class    =& webphoto_photo_build::getInstance( $dirname );
-	$this->_mime_class     =& webphoto_mime::getInstance( $dirname );
-	$this->_redirect_class =& webphoto_photo_redirect::getInstance( $dirname, $trust_dirname );
+	$this->_photo_class    = webphoto_photo_create::getInstance( $dirname , $trust_dirname );
+	$this->_build_class    = webphoto_photo_build::getInstance( $dirname );
+	$this->_mime_class     = webphoto_mime::getInstance( $dirname );
+	$this->_redirect_class = webphoto_photo_redirect::getInstance( $dirname, $trust_dirname );
 
-	$this->_image_class =& webphoto_image_create::getInstance( $dirname , $trust_dirname );
+	$this->_image_class = webphoto_image_create::getInstance( $dirname , $trust_dirname );
 	$this->_has_image_resize  = $this->_image_class->has_resize();
 	$this->_has_image_rotate  = $this->_image_class->has_rotate();
 
-	$this->_upload_class =& webphoto_upload::getInstance( $dirname , $trust_dirname );
+	$this->_upload_class = webphoto_upload::getInstance( $dirname , $trust_dirname );
 	$this->_upload_class->set_flag_size_limit( !$this->_has_image_resize );
 
 	$this->_has_insertable  = $this->_perm_class->has_insertable();

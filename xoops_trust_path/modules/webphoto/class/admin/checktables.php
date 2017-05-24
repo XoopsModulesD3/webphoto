@@ -49,27 +49,27 @@ function webphoto_admin_checktables( $dirname, $trust_dirname )
 	$this->webphoto_base_this( $dirname, $trust_dirname );
 
 	$this->_mime_handler     
-		=& webphoto_mime_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_mime_handler::getInstance( $dirname, $trust_dirname );
 	$this->_vote_handler     
-		=& webphoto_vote_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_vote_handler::getInstance( $dirname, $trust_dirname );
 	$this->_gicon_handler    
-		=& webphoto_gicon_handler::getInstance( $dirname, $trust_dirname  );
+		= webphoto_gicon_handler::getInstance( $dirname, $trust_dirname  );
 	$this->_tag_handler      
-		=& webphoto_tag_handler::getInstance( $dirname, $trust_dirname  );
+		= webphoto_tag_handler::getInstance( $dirname, $trust_dirname  );
 	$this->_p2t_handler      
-		=& webphoto_p2t_handler::getInstance( $dirname, $trust_dirname  );
+		= webphoto_p2t_handler::getInstance( $dirname, $trust_dirname  );
 	$this->_syno_handler     
-		=& webphoto_syno_handler::getInstance( $dirname, $trust_dirname  );
+		= webphoto_syno_handler::getInstance( $dirname, $trust_dirname  );
 	$this->_user_handler     
-		=& webphoto_user_handler::getInstance( $dirname, $trust_dirname  );
+		= webphoto_user_handler::getInstance( $dirname, $trust_dirname  );
 	$this->_maillog_handler  
-		=& webphoto_maillog_handler::getInstance( $dirname, $trust_dirname  );
+		= webphoto_maillog_handler::getInstance( $dirname, $trust_dirname  );
 	$this->_player_handler   
-		=& webphoto_player_handler::getInstance( $dirname, $trust_dirname  );
+		= webphoto_player_handler::getInstance( $dirname, $trust_dirname  );
 	$this->_flashvar_handler 
-		=& webphoto_flashvar_handler::getInstance( $dirname, $trust_dirname  );
+		= webphoto_flashvar_handler::getInstance( $dirname, $trust_dirname  );
 
-	$this->_xoops_comments_handler =& webphoto_xoops_comments_handler::getInstance();
+	$this->_xoops_comments_handler = webphoto_xoops_comments_handler::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

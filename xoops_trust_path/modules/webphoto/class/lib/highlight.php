@@ -233,7 +233,7 @@ function webphoto_highlighter($matches)
 
 function webphoto_highlighter_by_style($matches) 
 {
-	$highlight =& webphoto_lib_highlight::getInstance();
+	$highlight = webphoto_lib_highlight::getInstance();
 	$style = $highlight->get_style();
 	$ret   = false;
 	if ( is_array($matches) && isset($matches[0]) ) {
@@ -244,7 +244,7 @@ function webphoto_highlighter_by_style($matches)
 
 function webphoto_highlighter_by_class($matches) 
 {
-	$highlight =& webphoto_lib_highlight::getInstance();
+	$highlight = webphoto_lib_highlight::getInstance();
 	$class = $highlight->get_class();
 	$ret   = false;
 	if ( is_array($matches) && isset($matches[0]) ){

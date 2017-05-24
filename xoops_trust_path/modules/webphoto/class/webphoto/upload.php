@@ -58,10 +58,10 @@ function webphoto_upload( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_mime_class =& webphoto_mime::getInstance( 
+	$this->_mime_class = webphoto_mime::getInstance( 
 		$dirname , $trust_dirname );
 
-	$this->_uploader_class =& webphoto_lib_uploader::getInstance() ;
+	$this->_uploader_class = webphoto_lib_uploader::getInstance() ;
 	$this->_uploader_class->setPrefix( _C_WEBPHOTO_UPLOADER_PREFIX ) ;
 	$this->_uploader_class->setUploadDir( $this->_TMP_DIR );
 

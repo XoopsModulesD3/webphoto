@@ -37,7 +37,7 @@ function webphoto_imagemagick( $dirname, $trust_dirname )
 {
 	$this->webphoto_cmd_base( $dirname, $trust_dirname );
 
-	$this->_imagemagick_class =& webphoto_lib_imagemagick::getInstance();
+	$this->_imagemagick_class = webphoto_lib_imagemagick::getInstance();
 
 	$this->_cfg_imagingpipe = $this->get_config_by_name( 'imagingpipe' );
 

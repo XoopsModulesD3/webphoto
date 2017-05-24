@@ -48,9 +48,9 @@ function webphoto_pdf( $dirname, $trust_dirname )
 {
 	$this->webphoto_cmd_base( $dirname, $trust_dirname );
 
-	$this->_xpdf_class        =& webphoto_lib_xpdf::getInstance();
-	$this->_imagemagick_class =& webphoto_lib_imagemagick::getInstance();
-	$this->_multibyte_class   =& webphoto_multibyte::getInstance();
+	$this->_xpdf_class        = webphoto_lib_xpdf::getInstance();
+	$this->_imagemagick_class = webphoto_lib_imagemagick::getInstance();
+	$this->_multibyte_class   = webphoto_multibyte::getInstance();
 
 	$this->_cfg_use_xpdf = $this->get_config_by_name( 'use_xpdf' );
 	$this->_cfg_xpdfpath = $this->get_config_dir_by_name( 'xpdfpath' );

@@ -37,7 +37,7 @@ function webphoto_main_search( $dirname , $trust_dirname )
 	$this->webphoto_show_list( $dirname , $trust_dirname );
 	$this->set_mode( 'search' );
 
-	$this->_search_class =& webphoto_lib_search::getInstance();
+	$this->_search_class = webphoto_lib_search::getInstance();
 	$this->_search_class->set_lang_zenkaku( $this->get_constant('SR_ZENKAKU') );
 	$this->_search_class->set_lang_hankaku( $this->get_constant('SR_HANKAKU') );
 	$this->_search_class->set_min_keyword( 

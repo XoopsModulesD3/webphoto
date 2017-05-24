@@ -45,9 +45,9 @@ function webphoto_edit_jpeg_create( $dirname , $trust_dirname )
 	$this->webphoto_edit_base_create( $dirname , $trust_dirname );
 
 	$this->_ext_class 
-		=& webphoto_ext::getInstance( $dirname , $trust_dirname );
+		= webphoto_ext::getInstance( $dirname , $trust_dirname );
 
-	$this->_image_create_class =& webphoto_image_create::getInstance( $dirname );
+	$this->_image_create_class = webphoto_image_create::getInstance( $dirname );
 
 }
 

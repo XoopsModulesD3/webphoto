@@ -30,7 +30,7 @@ class webphoto_lib_groupperm
 //---------------------------------------------------------
 function webphoto_lib_groupperm()
 {
-	$this->_db =& Database::getInstance();
+	$this->_db = Database::getInstance();
 	$this->_module_handler    =& xoops_gethandler('module') ;
 	$this->_member_handler    =& xoops_gethandler('member');
 	$this->_groupperm_handler =& xoops_gethandler('groupperm');

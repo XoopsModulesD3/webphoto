@@ -34,7 +34,7 @@ webphoto_include_once( 'class/admin/item_manager.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_admin_item_manager::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_admin_item_manager::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manage->main();
 exit();
 

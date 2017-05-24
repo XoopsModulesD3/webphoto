@@ -20,8 +20,8 @@ function fetchSummary( $link_id )
 	$mydirname = $this->mydirname ;
 	if ( preg_match( '/[^0-9a-zA-Z_-]/' , $mydirname ) ) die( 'Invalid mydirname' ) ;
 
-	$db =& Database::getInstance() ;
-	(method_exists('MyTextSanitizer', 'sGetInstance') and $myts =& MyTextSanitizer::sGetInstance()) || $myts =& MyTextsanitizer::getInstance() ;
+	$db = Database::getInstance() ;
+	(method_exists('MyTextSanitizer', 'sGetInstance') and $myts = MyTextSanitizer::sGetInstance()) || $myts = MyTextsanitizer::getInstance() ;
 
 	$module_handler =& xoops_gethandler( 'module' ) ;
 	$module =& $module_handler->getByDirname( $mydirname ) ;
@@ -51,7 +51,7 @@ function fetchSummary( $link_id )
 
 function validate_id( $link_id )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	// query
 	$sql  = 'SELECT COUNT(*) FROM '. $db->prefix( $this->mydirname.'_item' );
@@ -67,7 +67,7 @@ function validate_id( $link_id )
 
 function onUpdate( $mode , $link_id , $forum_id , $topic_id , $post_id = 0 )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$sql1  = 'SELECT COUNT(*) FROM ';
 	$sql1 .= $db->prefix( $this->d3forum_dirname.'_posts' ) .' p ';

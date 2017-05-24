@@ -49,14 +49,14 @@ function webphoto_tag_build( $dirname, $trust_dirname )
 	$this->webphoto_lib_error();
 
 	$this->_tag_handler       
-		=& webphoto_tag_handler::getInstance(   $dirname, $trust_dirname );
+		= webphoto_tag_handler::getInstance(   $dirname, $trust_dirname );
 	$this->_p2t_handler       
-		=& webphoto_p2t_handler::getInstance(   $dirname, $trust_dirname );
+		= webphoto_p2t_handler::getInstance(   $dirname, $trust_dirname );
 	$this->_photo_tag_handler 
-		=& webphoto_photo_tag_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_photo_tag_handler::getInstance( $dirname, $trust_dirname );
 
-	$this->_utility_class     =& webphoto_lib_utility::getInstance();
-	$this->_uri_class         =& webphoto_uri::getInstance( $dirname );
+	$this->_utility_class     = webphoto_lib_utility::getInstance();
+	$this->_uri_class         = webphoto_uri::getInstance( $dirname );
 
 	$this->_DIRNAME    = $dirname ;
 	$this->_MODULE_URL = XOOPS_URL       .'/modules/'. $dirname;

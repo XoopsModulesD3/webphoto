@@ -92,15 +92,15 @@ function webphoto_edit_imagemanager_submit( $dirname , $trust_dirname )
 {
 	$this->webphoto_edit_base( $dirname , $trust_dirname );
 
-	$this->_factory_create_class =& webphoto_edit_factory_create::getInstance( 
+	$this->_factory_create_class = webphoto_edit_factory_create::getInstance( 
 		$dirname , $trust_dirname );
-	$this->_redirect_class =& webphoto_edit_redirect::getInstance( 
+	$this->_redirect_class = webphoto_edit_redirect::getInstance( 
 		$dirname, $trust_dirname );
 
 	$this->_has_image_resize  = $this->_factory_create_class->has_image_resize();
 	$this->_has_image_rotate  = $this->_factory_create_class->has_image_rotate();
 
-	$this->_upload_class =& webphoto_upload::getInstance( 
+	$this->_upload_class = webphoto_upload::getInstance( 
 		$dirname , $trust_dirname );
 
 	$this->_has_insertable  = $this->_perm_class->has_insertable();

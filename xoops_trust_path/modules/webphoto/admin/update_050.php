@@ -27,7 +27,7 @@ webphoto_include_once( 'class/admin/update_050.php' );
 //=========================================================
 // main
 //=========================================================
-$manager =& webphoto_admin_update_050::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manager = webphoto_admin_update_050::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manager->main();
 exit();
 

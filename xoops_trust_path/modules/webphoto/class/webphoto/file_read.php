@@ -39,11 +39,11 @@ function webphoto_file_read( $dirname , $trust_dirname )
 {
 	$this->webphoto_item_public( $dirname, $trust_dirname );
 
-	$this->_file_handler    =& webphoto_file_handler::getInstance( 
+	$this->_file_handler    = webphoto_file_handler::getInstance( 
 		$dirname, $trust_dirname );
-	$this->_multibyte_class =& webphoto_multibyte::getInstance();
-	$this->_post_class      =& webphoto_lib_post::getInstance();
-	$this->_utility_class   =& webphoto_lib_utility::getInstance();
+	$this->_multibyte_class = webphoto_multibyte::getInstance();
+	$this->_post_class      = webphoto_lib_post::getInstance();
+	$this->_utility_class   = webphoto_lib_utility::getInstance();
 
 }
 

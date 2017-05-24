@@ -31,7 +31,7 @@ webphoto_include_once( 'class/admin/invite.php' );
 //=========================================================
 // main
 //=========================================================
-$manager =& webphoto_admin_invite::getInstance( 
+$manager = webphoto_admin_invite::getInstance( 
 	WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manager->main();
 exit();

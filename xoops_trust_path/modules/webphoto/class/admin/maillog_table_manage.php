@@ -36,7 +36,7 @@ function webphoto_admin_maillog_table_manage( $dirname , $trust_dirname )
 	$this->set_manage_list_column_array(
 		array( 'maillog_from', 'maillog_subject' ) );
 
-	$this->_unlink_class =& webphoto_edit_mail_unlink::getInstance( $dirname );
+	$this->_unlink_class = webphoto_edit_mail_unlink::getInstance( $dirname );
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

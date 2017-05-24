@@ -128,7 +128,7 @@ function print_form()
 		'op'  => 'retrieve',
 	);
 
-	$form_class =& webphoto_lib_element::getInstance();
+	$form_class = webphoto_lib_element::getInstance();
 	echo $form_class->build_form_box_with_style( $param, $hidden_array );
 }
 

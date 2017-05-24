@@ -66,15 +66,15 @@ function webphoto_gmap( $dirname , $trust_dirname )
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
 	$this->_gicon_handler   
-		=& webphoto_gicon_handler::getInstance(  $dirname , $trust_dirname);
+		= webphoto_gicon_handler::getInstance(  $dirname , $trust_dirname);
 	$this->_item_cat_handler 
-		=& webphoto_item_cat_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_item_cat_handler::getInstance( $dirname , $trust_dirname );
 	$this->_catlist_class   
 		=& webphoto_inc_catlist::getSingleton( $dirname , $trust_dirname );
 	$this->_gmap_info_class 
 		=& webphoto_inc_gmap_info::getSingleton( $dirname , $trust_dirname );
 	$this->_public_class
-		=& webphoto_photo_public::getInstance( $dirname, $trust_dirname  );
+		= webphoto_photo_public::getInstance( $dirname, $trust_dirname  );
 
 	$cfg_perm_item_read        = $this->get_config_by_name( 'perm_item_read' );
 	$this->_cfg_perm_cat_read  = $this->get_config_by_name( 'perm_cat_read' );

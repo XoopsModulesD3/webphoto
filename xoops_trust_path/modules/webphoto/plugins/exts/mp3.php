@@ -22,7 +22,7 @@ function webphoto_ext_mp3( $dirname, $trust_dirname )
 {
 	$this->webphoto_ext_base( $dirname, $trust_dirname );
 
-	$this->_ffmpeg_class =& webphoto_ffmpeg::getInstance( $dirname, $trust_dirname );
+	$this->_ffmpeg_class = webphoto_ffmpeg::getInstance( $dirname, $trust_dirname );
 }
 
 //---------------------------------------------------------

@@ -59,9 +59,9 @@ function webphoto_admin_item_table_manage( $dirname , $trust_dirname )
 		array( 'item_title', 'item_uid' ) );
 
 	$this->_search_class  
-		=& webphoto_edit_search_build::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_search_build::getInstance( $dirname , $trust_dirname );
 	$this->_delete_class  
-		=& webphoto_edit_item_delete::getInstance( $dirname , $trust_dirname  );
+		= webphoto_edit_item_delete::getInstance( $dirname , $trust_dirname  );
 
 }
 

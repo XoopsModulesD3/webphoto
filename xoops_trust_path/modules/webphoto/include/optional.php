@@ -32,27 +32,27 @@ function webphoto_fct()
 		'cat_id'   => 'category',
 	);
 
-	$d3_class =& webphoto_d3_optional::getInstance();
+	$d3_class = webphoto_d3_optional::getInstance();
 	return $d3_class->get_fct( $page_array );
 }
 
 function webphoto_include_once_trust( $file, $debug=true )
 {
-	$d3_class =& webphoto_d3_optional::getInstance();
+	$d3_class = webphoto_d3_optional::getInstance();
 	$d3_class->init_trust( WEBPHOTO_TRUST_DIRNAME );
 	return $d3_class->include_once_trust_file( $file, $debug );
 }
 
 function webphoto_include_once( $file, $dirname=null, $debug=true )
 {
-	$d3_class =& webphoto_d3_optional::getInstance();
+	$d3_class = webphoto_d3_optional::getInstance();
 	$d3_class->init( webphoto_get_dirname( $dirname ), WEBPHOTO_TRUST_DIRNAME );
 	return $d3_class->include_once_file( $file, $debug );
 }
 
 function webphoto_include_once_language( $file, $dirname=null, $language=null )
 {
-	$d3_class =& webphoto_d3_optional::getInstance();
+	$d3_class = webphoto_d3_optional::getInstance();
 	$d3_class->init( webphoto_get_dirname( $dirname ), WEBPHOTO_TRUST_DIRNAME );
 	$d3_class->set_language( webphoto_get_language( $language ) );
 	return $d3_class->include_once_language( $file );
@@ -60,7 +60,7 @@ function webphoto_include_once_language( $file, $dirname=null, $language=null )
 
 function webphoto_include_language( $file, $dirname=null, $language=null )
 {
-	$d3_class =& webphoto_d3_optional::getInstance();
+	$d3_class = webphoto_d3_optional::getInstance();
 	$d3_class->init( webphoto_get_dirname( $dirname ), WEBPHOTO_TRUST_DIRNAME );
 	$d3_class->set_language( webphoto_get_language( $language ) );
 	return $d3_class->include_language( $file );
@@ -68,21 +68,21 @@ function webphoto_include_language( $file, $dirname=null, $language=null )
 
 function webphoto_debug_msg( $file, $dirname=null )
 {
-	$d3_class =& webphoto_d3_optional::getInstance();
+	$d3_class = webphoto_d3_optional::getInstance();
 	$d3_class->init( webphoto_get_dirname( $dirname ), WEBPHOTO_TRUST_DIRNAME );
 	return $d3_class->debug_msg_include_file( $file );
 }
 
 function webphoto_include_once_preload( $dirname=null )
 {
-	$preload_class =& webphoto_d3_preload::getInstance();
+	$preload_class = webphoto_d3_preload::getInstance();
 	$preload_class->init( webphoto_get_dirname( $dirname ), WEBPHOTO_TRUST_DIRNAME );
 	return $preload_class->include_once_preload_files();
 }
 
 function webphoto_include_once_preload_trust()
 {
-	$preload_class =& webphoto_d3_preload::getInstance();
+	$preload_class = webphoto_d3_preload::getInstance();
 	$preload_class->init_trust( WEBPHOTO_TRUST_DIRNAME );
 	return $preload_class->include_once_preload_trust_files();
 }

@@ -99,36 +99,36 @@ function webphoto_rss( $dirname, $trust_dirname )
 	$this->set_template( 'db:'.$dirname.'_main_rss.html' );
 
 	$this->_cat_handler    
-		=& webphoto_cat_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_cat_handler::getInstance( $dirname, $trust_dirname );
 	$this->_item_handler   
-		=& webphoto_item_handler::getInstance( $dirname, $trust_dirname  );
+		= webphoto_item_handler::getInstance( $dirname, $trust_dirname  );
 	$this->_file_handler   
-		=& webphoto_file_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_file_handler::getInstance( $dirname, $trust_dirname );
 	$this->_public_class   
-		=& webphoto_photo_public::getInstance( $dirname, $trust_dirname );
+		= webphoto_photo_public::getInstance( $dirname, $trust_dirname );
 	$this->_sort_class     
-		=& webphoto_photo_sort::getInstance( $dirname, $trust_dirname );
+		= webphoto_photo_sort::getInstance( $dirname, $trust_dirname );
 	$this->_tag_class 
-		=& webphoto_tag::getInstance( $dirname , $trust_dirname );
+		= webphoto_tag::getInstance( $dirname , $trust_dirname );
 	$this->_main_class 
-		=& webphoto_main::getInstance( $dirname , $trust_dirname );
+		= webphoto_main::getInstance( $dirname , $trust_dirname );
 	$this->_category_class 
-		=& webphoto_category::getInstance( $dirname , $trust_dirname );
+		= webphoto_category::getInstance( $dirname , $trust_dirname );
 	$this->_user_class 
-		=& webphoto_user::getInstance( $dirname , $trust_dirname );
+		= webphoto_user::getInstance( $dirname , $trust_dirname );
 	$this->_place_class 
-		=& webphoto_place::getInstance( $dirname , $trust_dirname );
+		= webphoto_place::getInstance( $dirname , $trust_dirname );
 	$this->_date_class 
-		=& webphoto_date::getInstance( $dirname , $trust_dirname );
+		= webphoto_date::getInstance( $dirname , $trust_dirname );
 	$this->_search_class 
-		=& webphoto_search::getInstance( $dirname , $trust_dirname );
+		= webphoto_search::getInstance( $dirname , $trust_dirname );
 
-	$this->_config_class   =& webphoto_config::getInstance( $dirname );
-	$this->_uri_class      =& webphoto_uri::getInstance( $dirname );
+	$this->_config_class   = webphoto_config::getInstance( $dirname );
+	$this->_uri_class      = webphoto_uri::getInstance( $dirname );
 
-	$this->_pathinfo_class  =& webphoto_lib_pathinfo::getInstance();
-	$this->_utility_class   =& webphoto_lib_utility::getInstance();
-	$this->_multibyte_class =& webphoto_multibyte::getInstance();
+	$this->_pathinfo_class  = webphoto_lib_pathinfo::getInstance();
+	$this->_utility_class   = webphoto_lib_utility::getInstance();
+	$this->_multibyte_class = webphoto_multibyte::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

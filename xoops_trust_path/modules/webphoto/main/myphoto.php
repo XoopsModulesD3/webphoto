@@ -27,7 +27,7 @@ webphoto_include_once( 'class/main/user.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_user::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_user::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manage->set_list_mode( 'myphoto' ) ;
 
 $xoopsOption['template_main'] = $manage->list_get_template() ;

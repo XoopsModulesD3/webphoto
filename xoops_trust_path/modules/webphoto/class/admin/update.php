@@ -34,7 +34,7 @@ function webphoto_admin_update( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_update_check_class  =& webphoto_admin_update_check::getInstance( $dirname , $trust_dirname );
+	$this->_update_check_class  = webphoto_admin_update_check::getInstance( $dirname , $trust_dirname );
 
 }
 

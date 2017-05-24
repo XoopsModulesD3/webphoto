@@ -36,9 +36,9 @@ function webphoto_search( $dirname , $trust_dirname )
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
 	$this->_public_class
-		=& webphoto_photo_public::getInstance( $dirname, $trust_dirname );
+		= webphoto_photo_public::getInstance( $dirname, $trust_dirname );
 
-	$this->_search_class =& webphoto_lib_search::getInstance();
+	$this->_search_class = webphoto_lib_search::getInstance();
 
 	$this->_min_keyword =
 		$this->_search_class->get_xoops_config_search_keyword_min();

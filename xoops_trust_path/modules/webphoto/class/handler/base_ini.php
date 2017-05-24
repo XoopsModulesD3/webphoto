@@ -38,8 +38,8 @@ function webphoto_handler_base_ini( $dirname, $trust_dirname )
 	$this->_TRUST_DIRNAME = $trust_dirname;
 	$this->_TRUST_DIR     = XOOPS_TRUST_PATH .'/modules/'. $trust_dirname;
 
-	$this->_utility_class =& webphoto_lib_utility::getInstance();
-	$this->_mysql_utility_class =& webphoto_lib_mysql_utility::getInstance();
+	$this->_utility_class = webphoto_lib_utility::getInstance();
+	$this->_mysql_utility_class = webphoto_lib_mysql_utility::getInstance();
 
 	$this->_ini_class 
 		=& webphoto_inc_ini::getSingleton( $dirname, $trust_dirname );

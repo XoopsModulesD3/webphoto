@@ -30,7 +30,7 @@ function webphoto_admin_check_mb( $dirname, $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname, $trust_dirname );
 
-	$this->_multibyte_class =& webphoto_lib_multibyte::getInstance();
+	$this->_multibyte_class = webphoto_lib_multibyte::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

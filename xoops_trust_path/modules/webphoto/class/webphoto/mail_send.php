@@ -24,9 +24,9 @@ function webphoto_mail_send( $dirname , $trust_dirname )
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
 	$this->_mail_template_class 
-		=& webphoto_d3_mail_template::getInstance( $dirname , $trust_dirname );
+		= webphoto_d3_mail_template::getInstance( $dirname , $trust_dirname );
 
-	$this->_mail_send_class  =& webphoto_lib_mail_send::getInstance();
+	$this->_mail_send_class  = webphoto_lib_mail_send::getInstance();
 }
 
 // for admin_photo_manage admin_catmanager

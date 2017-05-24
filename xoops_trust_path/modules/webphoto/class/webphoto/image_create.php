@@ -49,8 +49,8 @@ class webphoto_image_create
 //---------------------------------------------------------
 function webphoto_image_create( $dirname )
 {
-	$this->_kind_class    =& webphoto_kind::getInstance();
-	$this->_config_class  =& webphoto_config::getInstance( $dirname );
+	$this->_kind_class    = webphoto_kind::getInstance();
+	$this->_config_class  = webphoto_config::getInstance( $dirname );
 
 	$this->_init_image_cmd();
 }
@@ -69,7 +69,7 @@ public static function &getInstance( $dirname = null, $trust_dirname = null )
 //---------------------------------------------------------
 function _init_image_cmd()
 {
-	$this->_image_cmd_class =& webphoto_lib_image_cmd::getInstance();
+	$this->_image_cmd_class = webphoto_lib_image_cmd::getInstance();
 
 	$this->_image_cmd_class->set_imagingpipe(  $this->get_config_by_name( 'imagingpipe' ) );
 	$this->_image_cmd_class->set_forcegd2(     $this->get_config_by_name( 'forcegd2' ) );

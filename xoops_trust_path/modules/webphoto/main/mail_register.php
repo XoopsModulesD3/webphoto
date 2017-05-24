@@ -42,7 +42,7 @@ webphoto_include_once( 'class/main/mail_register.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_mail_register::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_mail_register::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 
 // exit if execute edit
 $manage->check_action();

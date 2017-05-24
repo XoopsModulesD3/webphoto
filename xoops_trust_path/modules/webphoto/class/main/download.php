@@ -36,8 +36,8 @@ function webphoto_main_download( $dirname , $trust_dirname )
 {
 	$this->webphoto_file_read( $dirname, $trust_dirname );
 
-	$this->_readfile_class =& webphoto_lib_readfile::getInstance();
-	$this->_browser_class  =& webphoto_lib_browser::getInstance();
+	$this->_readfile_class = webphoto_lib_readfile::getInstance();
+	$this->_browser_class  = webphoto_lib_browser::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

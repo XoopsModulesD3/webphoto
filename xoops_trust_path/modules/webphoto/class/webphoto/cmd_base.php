@@ -47,9 +47,9 @@ function webphoto_cmd_base( $dirname, $trust_dirname )
 	$this->webphoto_base_ini( $dirname, $trust_dirname );
 
 	$this->_mime_class    
-		=& webphoto_mime::getInstance( $dirname, $trust_dirname );
+		= webphoto_mime::getInstance( $dirname, $trust_dirname );
 
-	$this->_config_class  =& webphoto_config::getInstance( $dirname );
+	$this->_config_class  = webphoto_config::getInstance( $dirname );
 
 	$this->_ini_safe_mode = ini_get('safe_mode');
 	$this->_TMP_DIR       = $this->_config_class->get_work_dir( 'tmp' );

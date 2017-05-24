@@ -58,12 +58,12 @@ function webphoto_main_submit_file( $dirname , $trust_dirname )
 {
 	$this->webphoto_edit_base( $dirname , $trust_dirname );
 
-	$this->_xoops_user_class =& webphoto_xoops_user::getInstance();
-	$this->_redirect_class   =& webphoto_edit_redirect::getInstance( 
+	$this->_xoops_user_class = webphoto_xoops_user::getInstance();
+	$this->_redirect_class   = webphoto_edit_redirect::getInstance( 
 		$dirname, $trust_dirname );
-	$this->_notification_class =& webphoto_notification_event::getInstance( 
+	$this->_notification_class = webphoto_notification_event::getInstance( 
 		$dirname , $trust_dirname );
-	$this->_factory_create_class  =& webphoto_edit_factory_create::getInstance( 
+	$this->_factory_create_class  = webphoto_edit_factory_create::getInstance( 
 		$dirname , $trust_dirname );
 
 	$this->_cfg_file_size = intval( $this->get_config_by_name( 'file_size' ) );
@@ -417,7 +417,7 @@ function get_redirect_msg()
 //---------------------------------------------------------
 function _build_form_submit()
 {
-	$form_class =& webphoto_edit_photo_form::getInstance( 
+	$form_class = webphoto_edit_photo_form::getInstance( 
 		$this->_DIRNAME, $this->_TRUST_DIRNAME  );
 
 	list ( $types, $allowed_exts ) = $this->get_my_allowed_mimes();
@@ -455,7 +455,7 @@ function _build_form_video_thumb()
 
 function _build_form_file_param( )
 {
-	$form_class =& webphoto_edit_form::getInstance( 
+	$form_class = webphoto_edit_form::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	$action = $this->_MODULE_URL .'/index.php' ;

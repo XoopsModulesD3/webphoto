@@ -24,7 +24,7 @@ webphoto_include_once( 'class/main/submit_imagemanager.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_submit_imagemanager::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_submit_imagemanager::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manage->main();
 exit();
 

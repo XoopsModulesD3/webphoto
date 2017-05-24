@@ -34,7 +34,7 @@ webphoto_include_once( 'class/admin/photo_table_manage.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_admin_photo_table_manage::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_admin_photo_table_manage::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manage->main();
 
 exit();

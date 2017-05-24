@@ -100,8 +100,8 @@ function webphoto_inc_oninstall( $dirname , $trust_dirname )
 	$this->init_handler(  $dirname );
 
 	$this->_group_class     =& webphoto_inc_group::getSingleton( $dirname );
-	$this->_gperm_def_class =& webphoto_inc_gperm_def::getInstance();
-	$this->_log_class       =& webphoto_lib_file_log::getInstance();
+	$this->_gperm_def_class = webphoto_inc_gperm_def::getInstance();
+	$this->_log_class       = webphoto_lib_file_log::getInstance();
 
 	$this->_oninstall_item_class 
 		=& webphoto_inc_oninstall_item::getSingleton( $dirname , $trust_dirname );

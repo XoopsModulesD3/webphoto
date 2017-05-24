@@ -37,7 +37,7 @@ function webphoto_config( $dirname )
 {
 	$this->_init( $dirname );
 
-	$this->_utility_class =& webphoto_lib_utility::getInstance();
+	$this->_utility_class = webphoto_lib_utility::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )
@@ -54,7 +54,7 @@ public static function &getInstance( $dirname = null, $trust_dirname = null )
 //---------------------------------------------------------
 function _init( $dirname )
 {
-	$xoops_class =& webphoto_xoops_base::getInstance();
+	$xoops_class = webphoto_xoops_base::getInstance();
 	$this->_config_array = $xoops_class->get_module_config_by_dirname( $dirname );
 }
 

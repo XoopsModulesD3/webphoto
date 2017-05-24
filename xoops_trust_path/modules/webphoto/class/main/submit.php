@@ -72,7 +72,7 @@ function webphoto_main_submit( $dirname , $trust_dirname )
 	$this->set_form_mode( 'submit' );
 
 	$this->_header_class 
-		=& webphoto_xoops_header::getInstance( $dirname , $trust_dirname );
+		= webphoto_xoops_header::getInstance( $dirname , $trust_dirname );
 
 	$this->init_preload();
 }
@@ -543,7 +543,7 @@ function _build_preview_info( $item_row )
 
 function _build_preview_submit( $item_row, $image_info )
 {
-	$show_class =& webphoto_show_photo::getInstance( 
+	$show_class = webphoto_show_photo::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	$photo = array_merge( 

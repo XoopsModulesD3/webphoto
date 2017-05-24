@@ -159,19 +159,19 @@ function webphoto_edit_form( $dirname , $trust_dirname )
 {
 	$this->webphoto_lib_form( $dirname , $trust_dirname );
 
-	$this->_config_class =& webphoto_config::getInstance( $dirname );
+	$this->_config_class = webphoto_config::getInstance( $dirname );
 
 	$this->_cat_handler  
-		=& webphoto_cat_handler::getInstance( $dirname , $trust_dirname  );
+		= webphoto_cat_handler::getInstance( $dirname , $trust_dirname  );
 	$this->_item_handler 
-		=& webphoto_item_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_item_handler::getInstance( $dirname , $trust_dirname );
 	$this->_file_handler 
-		=& webphoto_file_handler::getInstance( $dirname , $trust_dirname  );
+		= webphoto_file_handler::getInstance( $dirname , $trust_dirname  );
 	$this->_perm_class   
-		=& webphoto_permission::getInstance( $dirname , $trust_dirname );
+		= webphoto_permission::getInstance( $dirname , $trust_dirname );
 	$this->_embed_class  
-		=& webphoto_embed::getInstance( $dirname, $trust_dirname );
-	$this->_mysql_utility_class =& webphoto_lib_mysql_utility::getInstance();
+		= webphoto_embed::getInstance( $dirname, $trust_dirname );
+	$this->_mysql_utility_class = webphoto_lib_mysql_utility::getInstance();
 	$this->_ini_class 
 		=& webphoto_inc_ini::getSingleton( $dirname, $trust_dirname );
 
@@ -594,7 +594,7 @@ function init_preload()
 
 function preload_init()
 {
-	$this->_preload_class =& webphoto_d3_preload::getInstance();
+	$this->_preload_class = webphoto_d3_preload::getInstance();
 	$this->_preload_class->init( $this->_DIRNAME , $this->_TRUST_DIRNAME );
 }
 

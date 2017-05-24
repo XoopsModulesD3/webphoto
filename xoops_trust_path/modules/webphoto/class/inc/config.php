@@ -87,9 +87,9 @@ function _add_slash_to_head( $str )
 function _get_xoops_config( $dirname )
 {
 	if( defined("WEBPHOTO_COMMOND_MODE") && ( WEBPHOTO_COMMOND_MODE == 1 )) {
-		$config =& webphoto_bin_config::getInstance();
+		$config = webphoto_bin_config::getInstance();
 	} else {
-		$config =& webphoto_inc_xoops_config::getInstance();
+		$config = webphoto_inc_xoops_config::getInstance();
 	}
 
 	$this->_cached_config = $config->get_config_by_dirname( $dirname );

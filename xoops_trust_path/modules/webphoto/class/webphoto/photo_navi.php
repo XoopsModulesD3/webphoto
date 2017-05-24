@@ -42,9 +42,9 @@ function webphoto_photo_navi( $dirname , $trust_dirname )
 {
 	$this->webphoto_lib_error();
 
-	$this->_item_handler =& webphoto_item_handler::getInstance( 
+	$this->_item_handler = webphoto_item_handler::getInstance( 
 		$dirname , $trust_dirname );
-	$this->_image_class  =& webphoto_show_image::getInstance( 
+	$this->_image_class  = webphoto_show_image::getInstance( 
 		$dirname , $trust_dirname );
 }
 

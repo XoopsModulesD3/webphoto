@@ -41,7 +41,7 @@ webphoto_include_once( 'class/main/callback.php' );
 //=========================================================
 // main
 //=========================================================
-$webphoto_manage =& webphoto_main_callback::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$webphoto_manage = webphoto_main_callback::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $webphoto_manage->main();
 exit();
 

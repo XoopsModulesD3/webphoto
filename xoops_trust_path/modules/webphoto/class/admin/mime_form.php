@@ -38,7 +38,7 @@ function webphoto_admin_mime_form( $dirname , $trust_dirname )
 {
 	$this->webphoto_edit_form( $dirname , $trust_dirname );
 
-	$this->_mime_handler =& webphoto_mime_handler::getInstance(
+	$this->_mime_handler = webphoto_mime_handler::getInstance(
 		$dirname , $trust_dirname );
 }
 

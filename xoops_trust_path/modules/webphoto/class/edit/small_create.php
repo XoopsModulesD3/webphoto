@@ -34,7 +34,7 @@ function webphoto_edit_small_create( $dirname , $trust_dirname  )
 {
 	$this->webphoto_edit_middle_thumb_create( $dirname , $trust_dirname  );
 
-	$this->_remote_class =& webphoto_lib_remote_file::getInstance();
+	$this->_remote_class = webphoto_lib_remote_file::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

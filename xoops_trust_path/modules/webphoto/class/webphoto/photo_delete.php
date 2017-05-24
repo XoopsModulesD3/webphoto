@@ -38,12 +38,12 @@ function webphoto_photo_delete( $dirname )
 {
 	$this->webphoto_lib_error();
 
-	$this->_item_handler      =& webphoto_item_handler::getInstance( $dirname );
-	$this->_file_handler      =& webphoto_file_handler::getInstance( $dirname );
-	$this->_vote_handler      =& webphoto_vote_handler::getInstance( $dirname );
-	$this->_p2t_handler       =& webphoto_p2t_handler::getInstance(  $dirname );
-	$this->_maillog_handler   =& webphoto_maillog_handler::getInstance( $dirname );
-	$this->_mail_unlink_class =& webphoto_mail_unlink::getInstance( $dirname );
+	$this->_item_handler      = webphoto_item_handler::getInstance( $dirname );
+	$this->_file_handler      = webphoto_file_handler::getInstance( $dirname );
+	$this->_vote_handler      = webphoto_vote_handler::getInstance( $dirname );
+	$this->_p2t_handler       = webphoto_p2t_handler::getInstance(  $dirname );
+	$this->_maillog_handler   = webphoto_maillog_handler::getInstance( $dirname );
+	$this->_mail_unlink_class = webphoto_mail_unlink::getInstance( $dirname );
 
 	$this->_init_xoops_param();
 }

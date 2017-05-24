@@ -32,9 +32,9 @@ function webphoto_ext_ppt( $dirname, $trust_dirname )
 	$this->webphoto_ext_base( $dirname, $trust_dirname );
 
 	$this->_pdf_class 
-		=& webphoto_pdf::getInstance( $dirname, $trust_dirname  );
+		= webphoto_pdf::getInstance( $dirname, $trust_dirname  );
 	$this->_jod_class 
-		=& webphoto_jodconverter::getInstance( $dirname, $trust_dirname  );
+		= webphoto_jodconverter::getInstance( $dirname, $trust_dirname  );
 
 	$this->set_debug_by_name( 'PPT' );
 }

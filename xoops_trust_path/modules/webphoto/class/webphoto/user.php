@@ -34,7 +34,7 @@ function webphoto_user( $dirname , $trust_dirname )
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
 	$this->_public_class
-		=& webphoto_photo_public::getInstance( $dirname, $trust_dirname );
+		= webphoto_photo_public::getInstance( $dirname, $trust_dirname );
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

@@ -25,7 +25,7 @@ function webphoto_qr( $dirname, $trust_dirname )
 	$this->webphoto_base_this( $dirname, $trust_dirname );
 
 	$this->_user_handler
-		=& webphoto_user_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_user_handler::getInstance( $dirname, $trust_dirname );
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

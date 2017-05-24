@@ -75,9 +75,9 @@ function webphoto_admin_index( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_update_check_class =& webphoto_admin_update_check::getInstance(
+	$this->_update_check_class = webphoto_admin_update_check::getInstance(
 		$dirname , $trust_dirname );
-	$this->_checkconfig_class =& webphoto_admin_checkconfigs::getInstance( 
+	$this->_checkconfig_class = webphoto_admin_checkconfigs::getInstance( 
 		$dirname , $trust_dirname );
 	$this->_workdir_class =& webphoto_inc_workdir::getSingleton( 
 		$dirname, $trust_dirname );

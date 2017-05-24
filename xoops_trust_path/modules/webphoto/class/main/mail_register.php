@@ -57,10 +57,10 @@ function webphoto_main_mail_register( $dirname , $trust_dirname )
 	$this->webphoto_edit_base( $dirname , $trust_dirname );
 
 	$this->_user_handler     
-		=& webphoto_user_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_user_handler::getInstance( $dirname , $trust_dirname );
 
-	$this->_mail_class       =& webphoto_lib_mail::getInstance();
-	$this->_xoops_user_class =& webphoto_xoops_user::getInstance();
+	$this->_mail_class       = webphoto_lib_mail::getInstance();
+	$this->_xoops_user_class = webphoto_xoops_user::getInstance();
 
 	$this->_is_set_mail = $this->_config_class->is_set_mail();
 	$this->_has_mail    = $this->_perm_class->has_mail();
@@ -346,7 +346,7 @@ function print_form()
 		'mode' => $mode,
 	);
 
-	$form =& webphoto_edit_mail_register_form::getInstance( 
+	$form = webphoto_edit_mail_register_form::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	if ( $this->_check_user_form() ) {

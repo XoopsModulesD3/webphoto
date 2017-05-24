@@ -29,9 +29,9 @@ function webphoto_rate_check( $dirname, $trust_dirname )
 {
 	$this->webphoto_lib_base( $dirname, $trust_dirname );
 
-	$this->_item_handler =& webphoto_item_handler::getInstance( 
+	$this->_item_handler = webphoto_item_handler::getInstance( 
 		$dirname, $trust_dirname );
-	$this->_vote_handler =& webphoto_vote_handler::getInstance( 
+	$this->_vote_handler = webphoto_vote_handler::getInstance( 
 		$dirname, $trust_dirname  );
 
 }

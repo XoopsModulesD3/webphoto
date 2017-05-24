@@ -32,7 +32,7 @@ class webphoto_timeline_init
 //---------------------------------------------------------
 function webphoto_timeline_init( $dirname )
 {
-	$this->_config_class   =& webphoto_config::getInstance( $dirname );
+	$this->_config_class   = webphoto_config::getInstance( $dirname );
 	$this->_timeline_class =& webphoto_inc_timeline::getSingleton( $dirname );
 
 	$this->_cfg_timeline_dirname = 

@@ -46,7 +46,7 @@ function webphoto_main_place( $dirname , $trust_dirname )
 	$this->webphoto_show_list( $dirname , $trust_dirname );
 	$this->set_mode( 'place' );
 
-	$this->_search_class =& webphoto_lib_search::getInstance();
+	$this->_search_class = webphoto_lib_search::getInstance();
 	$this->_search_class->set_is_japanese( $this->_is_japanese );
 	$this->_search_class->set_flag_candidate( false );
 

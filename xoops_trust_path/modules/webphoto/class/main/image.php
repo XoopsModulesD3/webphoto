@@ -31,8 +31,8 @@ function webphoto_main_image( $dirname, $trust_dirname )
 {
 	$this->webphoto_file_read( $dirname, $trust_dirname );
 
-	$this->_readfile_class =& webphoto_lib_readfile::getInstance();
-	$this->_kind_class =& webphoto_kind::getInstance();
+	$this->_readfile_class = webphoto_lib_readfile::getInstance();
+	$this->_kind_class = webphoto_kind::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

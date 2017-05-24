@@ -22,7 +22,7 @@ function webphoto_multibyte()
 {
 	$this->webphoto_lib_multibyte();
 
-	$xoops_class =& webphoto_xoops_base::getInstance();
+	$xoops_class = webphoto_xoops_base::getInstance();
 	$is_japanese =  $xoops_class->is_japanese( _C_WEBPHOTO_JPAPANESE ) ;
 
 	$this->set_is_japanese( $is_japanese );

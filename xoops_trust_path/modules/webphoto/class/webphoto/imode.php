@@ -53,12 +53,12 @@ function webphoto_imode( $dirname , $trust_dirname )
 {
 	$this->webphoto_show_photo( $dirname , $trust_dirname );
 
-	$this->_agent_class        =& webphoto_lib_user_agent::getInstance();
-	$this->_pagenavi_class     =& webphoto_lib_pagenavi::getInstance();
-	$this->_multibyte_class    =& webphoto_lib_multibyte::getInstance();
-	$this->_photo_public_class =& webphoto_photo_public::getInstance( 
+	$this->_agent_class        = webphoto_lib_user_agent::getInstance();
+	$this->_pagenavi_class     = webphoto_lib_pagenavi::getInstance();
+	$this->_multibyte_class    = webphoto_lib_multibyte::getInstance();
+	$this->_photo_public_class = webphoto_photo_public::getInstance( 
 		$dirname, $trust_dirname  );
-	$this->_item_public_class  =& webphoto_item_public::getInstance( 
+	$this->_item_public_class  = webphoto_item_public::getInstance( 
 		$dirname, $trust_dirname );
 
 	$this->set_charset_output();

@@ -72,9 +72,9 @@ function webphoto_admin_cat_form( $dirname , $trust_dirname )
 	$this->webphoto_edit_form( $dirname , $trust_dirname );
 
 	$this->_gicon_handler  
-		=& webphoto_gicon_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_gicon_handler::getInstance( $dirname, $trust_dirname );
 
-	$this->_timeline_init_class =& webphoto_timeline_init::getInstance( $dirname );
+	$this->_timeline_init_class = webphoto_timeline_init::getInstance( $dirname );
 
 	$this->_THIS_URL      = $this->_MODULE_URL .'/admin/index.php?fct=catmanager';
 	$this->_THIS_URL_EDIT = $this->_THIS_URL .'&amp;disp=edit&amp;cat_id=';

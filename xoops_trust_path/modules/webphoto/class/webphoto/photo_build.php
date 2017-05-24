@@ -38,9 +38,9 @@ function webphoto_photo_build( $dirname )
 	$this->_MODULE_URL = XOOPS_URL       .'/modules/'. $dirname;
 	$this->_MODULE_DIR = XOOPS_ROOT_PATH .'/modules/'. $dirname;
 
-	$this->_item_handler  =& webphoto_item_handler::getInstance( $dirname );
-	$this->_cat_handler   =& webphoto_cat_handler::getInstance(   $dirname );
-	$this->_syno_handler  =& webphoto_syno_handler::getInstance(  $dirname );
+	$this->_item_handler  = webphoto_item_handler::getInstance( $dirname );
+	$this->_cat_handler   = webphoto_cat_handler::getInstance(   $dirname );
+	$this->_syno_handler  = webphoto_syno_handler::getInstance(  $dirname );
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )
@@ -57,7 +57,7 @@ public static function &getInstance( $dirname = null, $trust_dirname = null )
 //---------------------------------------------------------
 function build_search_with_tag( $row )
 {
-	$tag_class =& webphoto_tag::getInstance( $this->_DIRNAME );
+	$tag_class = webphoto_tag::getInstance( $this->_DIRNAME );
 
 	return $this->build_search(
 		$row, 

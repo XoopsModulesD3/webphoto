@@ -53,7 +53,7 @@ function webphoto_edit_base_create( $dirname, $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname, $trust_dirname );
 
-	$this->_mime_class  =& webphoto_mime::getInstance( $dirname, $trust_dirname );
+	$this->_mime_class  = webphoto_mime::getInstance( $dirname, $trust_dirname );
 
 // each msg box
 	$this->_msg_class   = new webphoto_lib_msg();

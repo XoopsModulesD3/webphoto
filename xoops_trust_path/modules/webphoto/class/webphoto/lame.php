@@ -30,7 +30,7 @@ function webphoto_lame( $dirname, $trust_dirname )
 {
 	$this->webphoto_cmd_base( $dirname, $trust_dirname );
 
-	$this->_lame_class   =& webphoto_lib_lame::getInstance();
+	$this->_lame_class   = webphoto_lib_lame::getInstance();
 
 	$this->_cfg_use_lame = $this->get_config_by_name( 'use_lame' );
 

@@ -33,7 +33,7 @@ function webphoto_admin_player_form( $dirname , $trust_dirname )
 {
 	$this->webphoto_edit_form( $dirname , $trust_dirname );
 
-	$this->_player_handler  =& webphoto_player_handler::getInstance( 
+	$this->_player_handler  = webphoto_player_handler::getInstance( 
 		$dirname , $trust_dirname );
 }
 

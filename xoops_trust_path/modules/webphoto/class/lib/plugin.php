@@ -43,7 +43,7 @@ function webphoto_lib_plugin( $dirname, $trust_dirname )
 	$this->_TRUST_DIRNAME = $trust_dirname;
 	$this->_TRUST_DIR     = XOOPS_TRUST_PATH .'/modules/'. $trust_dirname;
 
-	$this->_utility_class  =& webphoto_lib_utility::getInstance();
+	$this->_utility_class  = webphoto_lib_utility::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

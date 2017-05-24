@@ -30,7 +30,7 @@ function webphoto_admin_text( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_readfile_class =& webphoto_lib_readfile::getInstance();
+	$this->_readfile_class = webphoto_lib_readfile::getInstance();
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

@@ -27,9 +27,9 @@ function webphoto_photo_misc_form( $dirname, $trust_dirname )
 {
 	$this->webphoto_form_this( $dirname, $trust_dirname );
 
-	$this->_embed_class  =& webphoto_embed::getInstance( $dirname, $trust_dirname );
-	$this->_editor_class =& webphoto_editor::getInstance( $dirname, $trust_dirname );
-	$this->_create_class =& webphoto_photo_create::getInstance( $dirname, $trust_dirname ); 
+	$this->_embed_class  = webphoto_embed::getInstance( $dirname, $trust_dirname );
+	$this->_editor_class = webphoto_editor::getInstance( $dirname, $trust_dirname );
+	$this->_create_class = webphoto_photo_create::getInstance( $dirname, $trust_dirname ); 
 
 }
 

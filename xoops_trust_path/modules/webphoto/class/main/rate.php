@@ -62,11 +62,11 @@ function webphoto_main_rate( $dirname, $trust_dirname )
 	$this->webphoto_base_this( $dirname, $trust_dirname );
 
 	$this->_vote_handler     
-		=& webphoto_vote_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_vote_handler::getInstance( $dirname, $trust_dirname );
 	$this->_rate_check_class 
-		=& webphoto_rate_check::getInstance( $dirname, $trust_dirname );
+		= webphoto_rate_check::getInstance( $dirname, $trust_dirname );
 	$this->_page_class       
-		=& webphoto_page::getInstance( $dirname , $trust_dirname );
+		= webphoto_page::getInstance( $dirname , $trust_dirname );
 
 	$this->_RATE_SESSION_NAME = $dirname.'_rate_uri';
 
@@ -246,7 +246,7 @@ function main()
 
 function get_photo()
 {
-	$show_class =& webphoto_show_image::getInstance( 
+	$show_class = webphoto_show_image::getInstance( 
 		$this->_DIRNAME, $this->_TRUST_DIRNAME );
 
 	$arr = array(

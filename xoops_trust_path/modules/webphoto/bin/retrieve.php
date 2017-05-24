@@ -59,7 +59,7 @@ webphoto_include_once_preload();
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_bin_retrieve::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_bin_retrieve::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 
 $manage->main();
 

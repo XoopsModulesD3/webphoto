@@ -102,20 +102,20 @@ function webphoto_admin_item_manager( $dirname , $trust_dirname )
 	$this->set_flag_admin( true );
 	$this->set_fct( 'item_manager' );
 
-	$this->_log_class =& webphoto_flash_log::getInstance( $dirname );
+	$this->_log_class = webphoto_flash_log::getInstance( $dirname );
 
 	$this->_vote_handler     
-		=& webphoto_vote_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_vote_handler::getInstance( $dirname , $trust_dirname );
 	$this->_flashvar_handler 
-		=& webphoto_flashvar_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_flashvar_handler::getInstance( $dirname , $trust_dirname );
 	$this->_playlist_class   
-		=& webphoto_playlist::getInstance( $dirname , $trust_dirname  );
+		= webphoto_playlist::getInstance( $dirname , $trust_dirname  );
 	$this->_flash_class      
-		=& webphoto_flash_player::getInstance( $dirname , $trust_dirname );
+		= webphoto_flash_player::getInstance( $dirname , $trust_dirname );
 	$this->_admin_item_form_class 
-		=& webphoto_admin_item_form::getInstance( $dirname , $trust_dirname );
+		= webphoto_admin_item_form::getInstance( $dirname , $trust_dirname );
 	$this->_sort_class 
-		=& webphoto_photo_sort::getInstance( $dirname, $trust_dirname );
+		= webphoto_photo_sort::getInstance( $dirname, $trust_dirname );
 
 	$this->_sort_class->init_for_admin();
 
@@ -391,7 +391,7 @@ function _print_list_navi( $total_all, $perpage )
 	$sort  = $this->_sort_class->get_photo_sort_name( $sort, true );
 	$navi_extra = 'fct='.$this->_THIS_FCT.'&amp;op='.$op.'&amp;sort='.$sort.'&amp;perpage='.$perpage;
 
-	$pagenavi_class =& webphoto_lib_pagenavi::getInstance();
+	$pagenavi_class = webphoto_lib_pagenavi::getInstance();
 	$pagenavi_class->XoopsPageNav( $total_all, $perpage, $start, 'start', $navi_extra );
 	echo $pagenavi_class->renderNav();
 }
@@ -472,7 +472,7 @@ function _build_bread_crumb()
 //---------------------------------------------------------
 function _modify_form()
 {
-	$show_class =& webphoto_show_photo::getInstance( 
+	$show_class = webphoto_show_photo::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	$mode = 'admin_modify' ;
@@ -997,7 +997,7 @@ function _flashvar_form()
 function _flashvar_submit()
 {
 // Fatal error: Class 'webphoto_flashvar_edit'
-	$edit_class =& webphoto_edit_flashvar_edit::getInstance( 
+	$edit_class = webphoto_edit_flashvar_edit::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	$this->_check_token_and_redirect();
@@ -1070,7 +1070,7 @@ function _flashvar_modify()
 {
 // Fatal error: Class 'webphoto_flashvar_edit' not found 
 
-	$edit_class =& webphoto_edit_flashvar_edit::getInstance( 
+	$edit_class = webphoto_edit_flashvar_edit::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	$this->_check_token_and_redirect();
@@ -1090,7 +1090,7 @@ function _flashvar_modify()
 //---------------------------------------------------------
 function _flashvar_restore()
 {
-	$edit_class =& webphoto_flashvar_edit::getInstance( 
+	$edit_class = webphoto_flashvar_edit::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	$this->_check_token_and_redirect();
@@ -1110,7 +1110,7 @@ function _flashvar_restore()
 //---------------------------------------------------------
 function _vote_stats()
 {
-	$show_class =& webphoto_show_photo::getInstance( 
+	$show_class = webphoto_show_photo::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	xoops_cp_header();
@@ -1489,7 +1489,7 @@ function _print_form_redo( $mode, $item_row, $flash_row )
 function _print_form_flashvar( $mode, $flashvar_row )
 {
 // Fatal error: Class webphoto_flashvar_form
-	$form_class =& webphoto_edit_flashvar_form::getInstance( 
+	$form_class = webphoto_edit_flashvar_form::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	$form_class->print_form( $mode, $flashvar_row );

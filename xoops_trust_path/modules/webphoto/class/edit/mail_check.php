@@ -91,13 +91,13 @@ function webphoto_edit_mail_check( $dirname, $trust_dirname )
 	$this->push_ad_word_array( _WEBPHOTO_MAIL_AD_WORD_2 );
 
 	$this->_user_handler  
-		=& webphoto_user_handler::getInstance( $dirname, $trust_dirname );
+		= webphoto_user_handler::getInstance( $dirname, $trust_dirname );
 	$this->_mime_class    
-		=& webphoto_mime::getInstance( $dirname, $trust_dirname );
+		= webphoto_mime::getInstance( $dirname, $trust_dirname );
 
-	$this->_config_class  =& webphoto_config::getInstance( $dirname );
-	$this->_utility_class =& webphoto_lib_utility::getInstance();
-	$this->_mail_class    =& webphoto_lib_mail::getInstance();
+	$this->_config_class  = webphoto_config::getInstance( $dirname );
+	$this->_utility_class = webphoto_lib_utility::getInstance();
+	$this->_mail_class    = webphoto_lib_mail::getInstance();
 
 	$cfg_fsize        = $this->_config_class->get_by_name( 'fsize' );
 	$cfg_mail_addr    = $this->_config_class->get_by_name( 'mail_addr' );

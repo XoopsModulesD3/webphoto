@@ -23,7 +23,7 @@ webphoto_include_once( 'class/main/image.php' );
 //=========================================================
 // main
 //=========================================================
-$webphoto_manage =& webphoto_main_image::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$webphoto_manage = webphoto_main_image::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $webphoto_manage->main();
 exit();
 

@@ -32,9 +32,9 @@ function webphoto_main_view_playlist( $dirname, $trust_dirname )
 {
 	$this->webphoto_file_read( $dirname, $trust_dirname );
 
-	$this->_config_class =& webphoto_config::getInstance( $dirname );
-	$this->_kind_class   =& webphoto_kind::getInstance();
-	$this->_readfile_class =& webphoto_lib_readfile::getInstance();
+	$this->_config_class = webphoto_config::getInstance( $dirname );
+	$this->_kind_class   = webphoto_kind::getInstance();
+	$this->_readfile_class = webphoto_lib_readfile::getInstance();
 
 	$uploads_path = $this->_config_class->get_uploads_path();
 	$this->_PLAYLISTS_DIR = XOOPS_ROOT_PATH . $uploads_path .'/playlists' ;

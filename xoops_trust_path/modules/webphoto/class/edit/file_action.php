@@ -34,10 +34,10 @@ function webphoto_edit_file_action( $dirname , $trust_dirname )
 	$this->webphoto_edit_base_create( $dirname , $trust_dirname );
 
 	$this->_jpeg_create_class 
-		=& webphoto_edit_jpeg_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_jpeg_create::getInstance( $dirname , $trust_dirname );
 
 	$this->_middle_thumb_create_class 
-		=& webphoto_edit_middle_thumb_create::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_middle_thumb_create::getInstance( $dirname , $trust_dirname );
 
 	$this->_FILE_LIST = explode( '|', _C_WEBPHOTO_FILE_LIST );
 }

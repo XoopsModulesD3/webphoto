@@ -64,7 +64,7 @@ class webphoto_d3_comment_view
 function webphoto_d3_comment_view()
 {
 	$this->_comment_handler =& xoops_gethandler('comment');
-	$this->_groupperm_class =& webphoto_xoops_groupperm::getInstance();
+	$this->_groupperm_class = webphoto_xoops_groupperm::getInstance();
 
 	$this->_init_xoops_param();
 }

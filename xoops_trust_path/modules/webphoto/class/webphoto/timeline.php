@@ -50,14 +50,14 @@ function webphoto_timeline( $dirname, $trust_dirname )
 	$this->webphoto_base_this( $dirname, $trust_dirname );
 
 	$this->_public_class
-		=& webphoto_photo_public::getInstance( $dirname, $trust_dirname  );
+		= webphoto_photo_public::getInstance( $dirname, $trust_dirname  );
 	$this->_catlist_class   
 		=& webphoto_inc_catlist::getSingleton( $dirname , $trust_dirname );
 
 	$this->_image_class 
-		=& webphoto_show_image::getInstance( $dirname, $trust_dirname );
+		= webphoto_show_image::getInstance( $dirname, $trust_dirname );
 
-	$this->_timeline_init_class =& webphoto_timeline_init::getInstance( $dirname );
+	$this->_timeline_init_class = webphoto_timeline_init::getInstance( $dirname );
 
 	$this->_init_timeline = $this->_timeline_init_class->get_init();
 

@@ -55,11 +55,11 @@ function webphoto_ext_base( $dirname, $trust_dirname )
 {
 	$this->webphoto_base_ini( $dirname, $trust_dirname );
 
-	$this->_mime_handler  =& webphoto_mime_handler::getInstance(
+	$this->_mime_handler  = webphoto_mime_handler::getInstance(
 		$dirname, $trust_dirname );
 
-	$this->_config_class    =& webphoto_config::getInstance( $dirname );
-	$this->_multibyte_class =& webphoto_multibyte::getInstance();
+	$this->_config_class    = webphoto_config::getInstance( $dirname );
+	$this->_multibyte_class = webphoto_multibyte::getInstance();
 
 	$this->_cfg_work_dir  = $this->_config_class->get_by_name( 'workdir' );
 	$this->_cfg_makethumb = $this->_config_class->get_by_name( 'makethumb' );

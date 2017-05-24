@@ -116,15 +116,15 @@ function webphoto_show_photo( $dirname, $trust_dirname )
 	$this->webphoto_base_this( $dirname, $trust_dirname );
 
 	$this->_image_class 
-		=& webphoto_show_image::getInstance( $dirname, $trust_dirname );
+		= webphoto_show_image::getInstance( $dirname, $trust_dirname );
 	$this->_tag_build_class 
-		=& webphoto_tag_build::getInstance( $dirname, $trust_dirname );
+		= webphoto_tag_build::getInstance( $dirname, $trust_dirname );
 
-	$this->_multibyte_class =& webphoto_multibyte::getInstance();
+	$this->_multibyte_class = webphoto_multibyte::getInstance();
 
 	$this->_tag_build_class->set_is_japanese( $this->_is_japanese );
 
-	$this->_highlight_class =& webphoto_lib_highlight::getInstance();
+	$this->_highlight_class = webphoto_lib_highlight::getInstance();
 	$this->_highlight_class->set_replace_callback( 'webphoto_highlighter_by_class' );
 	$this->_highlight_class->set_class( 'webphoto_highlight' );
 

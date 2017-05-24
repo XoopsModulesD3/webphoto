@@ -49,10 +49,10 @@ function webphoto_jodconverter( $dirname, $trust_dirname )
 {
 	$this->webphoto_cmd_base( $dirname, $trust_dirname );
 
-	$this->_config_class    =& webphoto_config::getInstance( $dirname );
-	$this->_jod_class       =& webphoto_lib_jodconverter::getInstance();
-	$this->_multibyte_class =& webphoto_multibyte::getInstance();
-	$this->_utility_class   =& webphoto_lib_utility::getInstance();
+	$this->_config_class    = webphoto_config::getInstance( $dirname );
+	$this->_jod_class       = webphoto_lib_jodconverter::getInstance();
+	$this->_multibyte_class = webphoto_multibyte::getInstance();
+	$this->_utility_class   = webphoto_lib_utility::getInstance();
 
 	$this->_TMP_DIR = $this->_config_class->get_work_dir( 'tmp' );
 

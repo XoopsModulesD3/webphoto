@@ -33,9 +33,9 @@ class webphoto_exif
 //---------------------------------------------------------
 function webphoto_exif()
 {
-	$this->_exif_class    =& webphoto_lib_exif::getInstance();
-	$this->_utility_class =& webphoto_lib_utility::getInstance();
-	$this->_mysql_utility_class =& webphoto_lib_mysql_utility::getInstance();
+	$this->_exif_class    = webphoto_lib_exif::getInstance();
+	$this->_utility_class = webphoto_lib_utility::getInstance();
+	$this->_mysql_utility_class = webphoto_lib_mysql_utility::getInstance();
 
 }
 

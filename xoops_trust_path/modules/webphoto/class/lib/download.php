@@ -37,9 +37,9 @@ function webphoto_main_download( $dirname , $trust_dirname )
 {
 	$this->webphoto_file_read( $dirname, $trust_dirname );
 
-	$this->_readfile_class =& webphoto_lib_readfile::getInstance();
-	$this->_browser_class  =& webphoto_lib_browser::getInstance();
-	$this->_filename_class =& webphoto_download_filename::getInstance();
+	$this->_readfile_class = webphoto_lib_readfile::getInstance();
+	$this->_browser_class  = webphoto_lib_browser::getInstance();
+	$this->_filename_class = webphoto_download_filename::getInstance();
 
 	$is_japanese = $this->xoops_class->is_japanese( _C_WEBPHOTO_JPAPANESE ) ;
 

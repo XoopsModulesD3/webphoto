@@ -30,7 +30,7 @@ function webphoto_main_visit( $dirname , $trust_dirname )
 {
 	$this->webphoto_item_public( $dirname , $trust_dirname );
 
-	$this->_post_class =& webphoto_lib_post::getInstance();
+	$this->_post_class = webphoto_lib_post::getInstance();
 
 }
 

@@ -38,13 +38,13 @@ function webphoto_admin_update_check ( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_ini( $dirname , $trust_dirname );
 
-	$this->_item_handler   =& webphoto_item_handler::getInstance(
+	$this->_item_handler   = webphoto_item_handler::getInstance(
 		$dirname , $trust_dirname );
-	$this->_file_handler   =& webphoto_file_handler::getInstance(   
+	$this->_file_handler   = webphoto_file_handler::getInstance(   
 		$dirname , $trust_dirname );
-	$this->_player_handler =& webphoto_player_handler::getInstance( 
+	$this->_player_handler = webphoto_player_handler::getInstance( 
 		$dirname , $trust_dirname );
-	$this->_photo_handler  =& webphoto_photo_handler::getInstance( $dirname );
+	$this->_photo_handler  = webphoto_photo_handler::getInstance( $dirname );
 
 	$this->_item_count_all = $this->_item_handler->get_count_all();
 

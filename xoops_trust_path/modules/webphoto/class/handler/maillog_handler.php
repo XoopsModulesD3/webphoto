@@ -233,13 +233,13 @@ function build_attach_row_to_array( $row )
 
 function info_str_to_array( $str )
 {
-	$utility_class =& webphoto_lib_utility::getInstance();
+	$utility_class = webphoto_lib_utility::getInstance();
 	return $utility_class->str_to_array( $str, _C_WEBPHOTO_INFO_SEPARATOR );
 }
 
 function info_array_to_str( $arr )
 {
-	$utility_class =& webphoto_lib_utility::getInstance();
+	$utility_class = webphoto_lib_utility::getInstance();
 	return $utility_class->array_to_str( $arr, _C_WEBPHOTO_INFO_SEPARATOR );
 }
 

@@ -84,16 +84,16 @@ function webphoto_admin_catmanager( $dirname , $trust_dirname )
 	$this->webphoto_edit_base( $dirname , $trust_dirname );
 
 	$this->_delete_class    
-		=& webphoto_edit_item_delete::getInstance( $dirname , $trust_dirname  );
+		= webphoto_edit_item_delete::getInstance( $dirname , $trust_dirname  );
 	$this->_upload_class    
-		=& webphoto_upload::getInstance( $dirname , $trust_dirname );
+		= webphoto_upload::getInstance( $dirname , $trust_dirname );
 
-	$this->_image_create_class =& webphoto_image_create::getInstance( $dirname );
+	$this->_image_create_class = webphoto_image_create::getInstance( $dirname );
 
 	$this->_group_class     =& webphoto_inc_group::getSingleton( $dirname );
-	$this->_gperm_def_class =& webphoto_inc_gperm_def::getInstance();
-	$this->_groupperm_class =& webphoto_lib_groupperm::getInstance();
-	$this->_timeline_init_class =& webphoto_timeline_init::getInstance( $dirname );
+	$this->_gperm_def_class = webphoto_inc_gperm_def::getInstance();
+	$this->_groupperm_class = webphoto_lib_groupperm::getInstance();
+	$this->_timeline_init_class = webphoto_timeline_init::getInstance( $dirname );
 
 	$this->_cfg_cat_width      = $this->_config_class->get_by_name( 'cat_width' );
 	$this->_cfg_csub_width     = $this->_config_class->get_by_name( 'csub_width' );
@@ -776,14 +776,14 @@ function _print_list( )
 //---------------------------------------------------------
 function _print_cat_form( $row, $param )
 {
-	$cat_form =& webphoto_admin_cat_form::getInstance( 
+	$cat_form = webphoto_admin_cat_form::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$cat_form->print_form( $row, $param );
 }
 
 function _print_cat_list( $cat_tree_array )
 {
-	$cat_form =& webphoto_admin_cat_form::getInstance( 
+	$cat_form = webphoto_admin_cat_form::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$cat_form->print_list( $cat_tree_array );
 }
@@ -804,7 +804,7 @@ function _print_del_confirm()
 
 	echo "<h4>". $this->sanitize( $row['cat_title'] ) ."</h4>\n";
 
-	$cat_form =& webphoto_admin_cat_form::getInstance( 
+	$cat_form = webphoto_admin_cat_form::getInstance( 
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$cat_form->print_del_confirm( $get_catid );
 
@@ -814,7 +814,7 @@ function _print_del_confirm()
 
 function _print_gperm_form( $group_id )
 {
-	$form_class =& webphoto_admin_groupperm_form::getInstance(
+	$form_class = webphoto_admin_groupperm_form::getInstance(
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 
 	echo $form_class->build_form_by_groupid( 
@@ -825,7 +825,7 @@ function _print_member( $group_id )
 {
 	$template = 'db:'. $this->_DIRNAME .'_inc_user_list.html';
 
-	$userlist_class =& webphoto_lib_userlist::getInstance();
+	$userlist_class = webphoto_lib_userlist::getInstance();
 	$param = $userlist_class->build_param_by_groupid( $group_id, $this->_USERLIST_LIMIT );
 	$param['xoops_dirname'] = $this->_DIRNAME ;
 

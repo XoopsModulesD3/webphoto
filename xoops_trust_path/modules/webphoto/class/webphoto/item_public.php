@@ -37,10 +37,10 @@ function webphoto_item_public( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_ini( $dirname, $trust_dirname );
 
-	$this->_config_class =& webphoto_config::getInstance( $dirname );
-	$this->_cat_handler  =& webphoto_cat_handler::getInstance( 
+	$this->_config_class = webphoto_config::getInstance( $dirname );
+	$this->_cat_handler  = webphoto_cat_handler::getInstance( 
 		$dirname, $trust_dirname );
-	$this->_item_handler =& webphoto_item_handler::getInstance( 
+	$this->_item_handler = webphoto_item_handler::getInstance( 
 		$dirname, $trust_dirname );
 
 	$this->_cfg_perm_cat_read  = $this->_config_class->get_by_name( 'perm_cat_read' ) ;

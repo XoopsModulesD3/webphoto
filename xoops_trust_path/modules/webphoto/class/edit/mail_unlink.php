@@ -35,8 +35,8 @@ class webphoto_edit_mail_unlink
 //---------------------------------------------------------
 function webphoto_edit_mail_unlink( $dirname )
 {
-	$this->_config_class  =& webphoto_config::getInstance( $dirname );
-	$this->_utility_class =& webphoto_lib_utility::getInstance();
+	$this->_config_class  = webphoto_config::getInstance( $dirname );
+	$this->_utility_class = webphoto_lib_utility::getInstance();
 
 	$this->_WORK_DIR  = $this->_config_class->get_by_name( 'workdir' );
 	$this->_MAIL_DIR  = $this->_WORK_DIR .'/mail' ;

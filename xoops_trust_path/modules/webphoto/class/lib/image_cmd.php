@@ -68,9 +68,9 @@ class webphoto_lib_image_cmd
 //---------------------------------------------------------
 function webphoto_lib_image_cmd()
 {
-	$this->_gd_class          =& webphoto_lib_gd::getInstance();
-	$this->_imagemagick_class =& webphoto_lib_imagemagick::getInstance();
-	$this->_netpbm_class      =& webphoto_lib_netpbm::getInstance();
+	$this->_gd_class          = webphoto_lib_gd::getInstance();
+	$this->_imagemagick_class = webphoto_lib_imagemagick::getInstance();
+	$this->_netpbm_class      = webphoto_lib_netpbm::getInstance();
 
 	$this->_ini_safe_mode = ini_get('safe_mode');
 }

@@ -54,13 +54,13 @@ function webphoto_edit_video_middle_thumb_create( $dirname , $trust_dirname )
 	$this->webphoto_edit_base_create( $dirname , $trust_dirname );
 
 	$this->_ffmpeg_class     
-		=& webphoto_ffmpeg::getInstance( $dirname , $trust_dirname );
+		= webphoto_ffmpeg::getInstance( $dirname , $trust_dirname );
 	$this->_item_create_class  
-		=& webphoto_edit_item_create::getInstance( $dirname , $trust_dirname  );
+		= webphoto_edit_item_create::getInstance( $dirname , $trust_dirname  );
 	$this->_item_build_class 
-		=& webphoto_edit_item_build::getInstance($dirname , $trust_dirname );
+		= webphoto_edit_item_build::getInstance($dirname , $trust_dirname );
 	$this->_file_action_class   
-		=& webphoto_edit_file_action::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_file_action::getInstance( $dirname , $trust_dirname );
 
 	$this->_cfg_makethumb  = $this->get_config_by_name( 'makethumb' );
 	$this->_cfg_use_ffmpeg = $this->get_config_by_name( 'use_ffmpeg' );

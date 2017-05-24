@@ -32,8 +32,8 @@ function webphoto_admin_groupperm_form( $dirname , $trust_dirname )
 {
 	$this->webphoto_edit_base( $dirname , $trust_dirname );
 
-	$this->_form_class =& webphoto_lib_groupperm_form::getInstance();
-	$this->_def_class  =& webphoto_inc_gperm_def::getInstance();
+	$this->_form_class = webphoto_lib_groupperm_form::getInstance();
+	$this->_def_class  = webphoto_inc_gperm_def::getInstance();
 
 	$this->_TEMPLATE = 'db:'. $dirname .'_form_admin_groupperm.html';
 }

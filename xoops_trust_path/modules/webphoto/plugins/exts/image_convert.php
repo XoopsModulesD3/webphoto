@@ -28,7 +28,7 @@ function webphoto_ext_image_convert( $dirname, $trust_dirname )
 {
 	$this->webphoto_ext_base( $dirname, $trust_dirname );
 
-	$this->_imagemagick_class =& webphoto_imagemagick::getInstance( $dirname, $trust_dirname );
+	$this->_imagemagick_class = webphoto_imagemagick::getInstance( $dirname, $trust_dirname );
 
 	$this->set_debug_by_name( 'IMAGE_CONVERT' );
 }

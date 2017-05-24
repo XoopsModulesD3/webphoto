@@ -30,7 +30,7 @@ function webphoto_pagenavi( $dirname, $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname, $trust_dirname );
 
-	$this->_pagenavi_class =& webphoto_lib_pagenavi::getInstance();
+	$this->_pagenavi_class = webphoto_lib_pagenavi::getInstance();
 	$this->_pagenavi_class->set_mark_id_prev( '<b>'. $this->get_constant('NAVI_PREVIOUS') .'</b>' );
 	$this->_pagenavi_class->set_mark_id_next( '<b>'. $this->get_constant('NAVI_NEXT') .'</b>' );
 

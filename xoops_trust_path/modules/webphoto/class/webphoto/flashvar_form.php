@@ -48,7 +48,7 @@ function webphoto_flashvar_form( $dirname , $trust_dirname )
 	$this->webphoto_form_this( $dirname , $trust_dirname );
 	$this->set_path_color_pickup( $this->_MODULE_URL.'/libs' );
 
-	$this->_flashvar_handler  =& webphoto_flashvar_handler::getInstance( $dirname );
+	$this->_flashvar_handler  = webphoto_flashvar_handler::getInstance( $dirname );
 
 	$uploads_path          = $this->_config_class->get_uploads_path();
 	$this->_cfg_fsize      = $this->_config_class->get_by_name( 'fsize' );
@@ -364,7 +364,7 @@ function _build_line_captcha()
 	     file_exists( $this->_CAPTCHA_API_FILE ) ) 
 	{
 		include_once $this->_CAPTCHA_API_FILE ;
-		$captcha_api =& captcha_api::getInstance() ;
+		$captcha_api = captcha_api::getInstance() ;
 		return $captcha_api->make_xoops_form_label() ;
 	}
 	return null;

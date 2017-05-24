@@ -53,11 +53,11 @@ function webphoto_admin_update_040( $dirname , $trust_dirname )
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
 	$this->_item_create_class  
-		=& webphoto_edit_item_create::getInstance( $dirname , $trust_dirname  );
+		= webphoto_edit_item_create::getInstance( $dirname , $trust_dirname  );
 
-	$this->_photo_handler =& webphoto_photo_handler::getInstance( $dirname );
-	$this->_image_class   =& webphoto_image_info::getInstance( $dirname , $trust_dirname );
-	$this->_form_class    =& webphoto_lib_form::getInstance(   $dirname , $trust_dirname );
+	$this->_photo_handler = webphoto_photo_handler::getInstance( $dirname );
+	$this->_image_class   = webphoto_image_info::getInstance( $dirname , $trust_dirname );
+	$this->_form_class    = webphoto_lib_form::getInstance(   $dirname , $trust_dirname );
 
 	$this->_item_create_class->set_debug_error( true );
 	$this->_file_handler->set_debug_error( true );
@@ -90,7 +90,7 @@ public static function &getInstance( $dirname = null, $trust_dirname = null )
 //---------------------------------------------------------
 function _init_image_cmd()
 {
-	$this->_image_cmd_class =& webphoto_lib_image_cmd::getInstance();
+	$this->_image_cmd_class = webphoto_lib_image_cmd::getInstance();
 
 	$this->_image_cmd_class->set_imagingpipe(  $this->get_config_by_name( 'imagingpipe' ) );
 	$this->_image_cmd_class->set_forcegd2(     $this->get_config_by_name( 'forcegd2' ) );

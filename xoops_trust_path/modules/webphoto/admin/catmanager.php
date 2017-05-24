@@ -55,7 +55,7 @@ webphoto_include_once( 'class/admin/catmanager.php' );
 //=========================================================
 // main
 //=========================================================
-$manager =& webphoto_admin_catmanager::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manager = webphoto_admin_catmanager::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manager->main();
 exit();
 

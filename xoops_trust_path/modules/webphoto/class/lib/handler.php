@@ -84,7 +84,7 @@ function webphoto_lib_handler( $dirname=null )
 {
 	$this->webphoto_lib_error();
 
-	$this->_db =& Database::getInstance();
+	$this->_db = Database::getInstance();
 
 	$this->_xoops_groups    = $this->_get_xoops_groups() ;
 	$this->_xoops_mid       = $this->_get_xoops_mid();

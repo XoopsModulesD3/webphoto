@@ -24,7 +24,7 @@ webphoto_include_once( 'class/main/index.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_index::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_index::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manage->init();
 
 $xoopsOption['template_main'] = $manage->get_template_main() ;

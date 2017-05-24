@@ -43,7 +43,7 @@ function webphoto_edit_flashvar_form( $dirname , $trust_dirname )
 	$this->webphoto_edit_form( $dirname , $trust_dirname );
 
 	$this->_flashvar_handler  
-		=& webphoto_flashvar_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_flashvar_handler::getInstance( $dirname , $trust_dirname );
 
 	$uploads_path      = $this->_config_class->get_uploads_path();
 	$this->_LOGOS_PATH = $uploads_path . '/logos' ;
@@ -182,7 +182,7 @@ function build_captcha()
 	     file_exists( $this->_CAPTCHA_API_FILE ) ) 
 	{
 		include_once $this->_CAPTCHA_API_FILE ;
-		$captcha_api =& captcha_api::getInstance() ;
+		$captcha_api = captcha_api::getInstance() ;
 		$cap  = $captcha_api->make_caption();
 		$ele  = $captcha_api->make_img_input();
 		$show = true;

@@ -59,12 +59,12 @@ function webphoto_admin_photo_form( $dirname , $trust_dirname )
 	$this->webphoto_edit_form( $dirname , $trust_dirname );
 	$this->init_pagenavi();
 
-	$this->_cat_selbox_class =& webphoto_cat_selbox::getInstance();
+	$this->_cat_selbox_class = webphoto_cat_selbox::getInstance();
 	$this->_cat_selbox_class->init( $dirname , $trust_dirname );
 
-	$this->_show_class   =& webphoto_show_photo::getInstance( $dirname , $trust_dirname );
+	$this->_show_class   = webphoto_show_photo::getInstance( $dirname , $trust_dirname );
 
-	$this->_multibyte_class =& webphoto_lib_multibyte::getInstance();
+	$this->_multibyte_class = webphoto_lib_multibyte::getInstance();
 
 // preload
 	$this->preload_init();

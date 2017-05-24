@@ -57,13 +57,13 @@ class webphoto_show_image
 //---------------------------------------------------------
 function webphoto_show_image( $dirname , $trust_dirname )
 {
-	$this->_config_class  =& webphoto_config::getInstance( $dirname );
-	$this->_kind_class    =& webphoto_kind::getInstance();
-	$this->_utility_class =& webphoto_lib_utility::getInstance();
+	$this->_config_class  = webphoto_config::getInstance( $dirname );
+	$this->_kind_class    = webphoto_kind::getInstance();
+	$this->_utility_class = webphoto_lib_utility::getInstance();
 
-	$this->_item_handler  =& webphoto_item_handler::getInstance( 
+	$this->_item_handler  = webphoto_item_handler::getInstance( 
 		$dirname , $trust_dirname );
-	$this->_file_handler  =& webphoto_file_handler::getInstance( 
+	$this->_file_handler  = webphoto_file_handler::getInstance( 
 		$dirname , $trust_dirname  );
 
 	list( $this->_max_large_width, $this->_max_large_height )

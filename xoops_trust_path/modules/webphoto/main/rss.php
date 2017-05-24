@@ -102,7 +102,7 @@ webphoto_include_language( 'main.php' );
 //=========================================================
 // main
 //=========================================================
-$webphoto_manage =& webphoto_main_rss::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$webphoto_manage = webphoto_main_rss::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $webphoto_manage->main();
 exit();
 

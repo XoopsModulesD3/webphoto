@@ -24,9 +24,9 @@ function webphoto_edit_file_build( $dirname , $trust_dirname )
 {
 	$this->webphoto_edit_base_create( $dirname );
 
-	$this->_exif_class =& webphoto_exif::getInstance();
-	$this->_ext_class  =& webphoto_ext::getInstance( $dirname , $trust_dirname );
-	$this->_mime_class =& webphoto_mime::getInstance( $dirname );
+	$this->_exif_class = webphoto_exif::getInstance();
+	$this->_ext_class  = webphoto_ext::getInstance( $dirname , $trust_dirname );
+	$this->_mime_class = webphoto_mime::getInstance( $dirname );
 }
 
 public static function &getInstance( $dirname = null, $trust_dirname = null )

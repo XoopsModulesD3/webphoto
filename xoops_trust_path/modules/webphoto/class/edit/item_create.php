@@ -29,8 +29,8 @@ function webphoto_edit_item_create( $dirname , $trust_dirname )
 {
 	$this->webphoto_item_handler( $dirname, $trust_dirname );
 
-	$this->_xoops_class     =& webphoto_xoops_base::getInstance();
-	$this->_multibyte_class =& webphoto_lib_multibyte::getInstance();
+	$this->_xoops_class     = webphoto_xoops_base::getInstance();
+	$this->_multibyte_class = webphoto_lib_multibyte::getInstance();
 
 	$this->_is_japanese = $this->_xoops_class->is_japanese( _C_WEBPHOTO_JPAPANESE ) ;
 

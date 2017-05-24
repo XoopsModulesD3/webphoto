@@ -24,7 +24,7 @@ webphoto_include_once( 'class/main/edit.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_edit::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_edit::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 
 // exit if execute edit
 $manage->check_action();

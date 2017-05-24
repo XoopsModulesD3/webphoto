@@ -32,7 +32,7 @@ function webphoto_lib_mail_send()
 {
 	$this->webphoto_lib_error();
 
-	$this->_mail_class =& webphoto_lib_mail::getInstance();
+	$this->_mail_class = webphoto_lib_mail::getInstance();
 
 	$this->_xoops_sitename    = $this->get_xoops_sitename();
 	$this->_xoops_adminmail   = $this->get_xoops_adminmail();

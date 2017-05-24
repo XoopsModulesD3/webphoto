@@ -27,9 +27,9 @@ function webphoto_admin_rss_manager( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_rss_class =& webphoto_rss::getInstance( 
+	$this->_rss_class = webphoto_rss::getInstance( 
 		$dirname , $trust_dirname );
-	$this->_form_class =& webphoto_admin_rss_form::getInstance( 
+	$this->_form_class = webphoto_admin_rss_form::getInstance( 
 		$dirname , $trust_dirname );
 
 	$this->_template = 'db:'.$dirname.'_main_rss.html' ;

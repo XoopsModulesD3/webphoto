@@ -27,7 +27,7 @@ if( ! defined( 'WEBPHOTO_TRUST_PATH' ) ) die( 'not permit' ) ;
 if ( !defined('_WEBPHOTO_PEAR_LOADED') ) {
 	define('_WEBPHOTO_PEAR_LOADED', '1' );
 
-	$config_class =& webphoto_config::getInstance( WEBPHOTO_DIRNAME );
+	$config_class = webphoto_config::getInstance( WEBPHOTO_DIRNAME );
 	$pear_path    =  $config_class->get_by_name('pear_path');
 
 	if ( empty($pear_path) || !is_dir($pear_path)) {

@@ -19,7 +19,7 @@ webphoto_include_once( 'class/admin/create_file_list.php' );
 //=========================================================
 // main
 //=========================================================
-$manager =& webphoto_admin_create_file_list::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manager = webphoto_admin_create_file_list::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manager->main();
 exit();
 

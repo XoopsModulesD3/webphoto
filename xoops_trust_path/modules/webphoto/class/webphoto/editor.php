@@ -32,7 +32,7 @@ function webphoto_editor( $dirname, $trust_dirname )
 	$this->set_prefix(  'webphoto_editor_' );
 
 	$this->_perm_class 
-		=& webphoto_permission::getInstance( $dirname, $trust_dirname );
+		= webphoto_permission::getInstance( $dirname, $trust_dirname );
 	$this->_has_html = $this->_perm_class->has_html();
 }
 

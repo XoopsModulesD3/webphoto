@@ -52,7 +52,7 @@ webphoto_include_language( 'extra.php' );
 //=========================================================
 // main
 //=========================================================
-$manage =& webphoto_main_i::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manage = webphoto_main_i::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 
 $manage->main();
 

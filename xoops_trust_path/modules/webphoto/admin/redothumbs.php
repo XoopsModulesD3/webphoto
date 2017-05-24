@@ -35,7 +35,7 @@ webphoto_include_once( 'class/admin/redothumbs.php' );
 //=========================================================
 // main
 //=========================================================
-$manager =& webphoto_admin_redothumbs::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
+$manager = webphoto_admin_redothumbs::getInstance( WEBPHOTO_DIRNAME , WEBPHOTO_TRUST_DIRNAME );
 $manager->main();
 exit();
 

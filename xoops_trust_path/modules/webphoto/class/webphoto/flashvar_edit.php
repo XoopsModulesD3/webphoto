@@ -43,9 +43,9 @@ function webphoto_flashvar_edit( $dirname , $trust_dirname )
 {
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
-	$this->_flashvar_handler =& webphoto_flashvar_handler::getInstance( $dirname );
-	$this->_upload_class     =& webphoto_upload::getInstance( $dirname , $trust_dirname );
-	$this->_image_cmd_class  =& webphoto_lib_image_cmd::getInstance();
+	$this->_flashvar_handler = webphoto_flashvar_handler::getInstance( $dirname );
+	$this->_upload_class     = webphoto_upload::getInstance( $dirname , $trust_dirname );
+	$this->_image_cmd_class  = webphoto_lib_image_cmd::getInstance();
 
 	$this->_cfg_logo_width = $this->_config_class->get_by_name( 'logo_width' );
 

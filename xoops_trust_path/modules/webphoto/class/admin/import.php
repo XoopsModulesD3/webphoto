@@ -57,9 +57,9 @@ function webphoto_admin_import( $dirname , $trust_dirname )
 {
 	$this->webphoto_edit_import( $dirname , $trust_dirname );
 
-	$this->_groupperm_class =& webphoto_xoops_groupperm::getInstance();
+	$this->_groupperm_class = webphoto_xoops_groupperm::getInstance();
 
-	$this->_image_handler =& webphoto_xoops_image_handler::getInstance();
+	$this->_image_handler = webphoto_xoops_image_handler::getInstance();
 	$this->_image_handler->set_debug_error( 1 );
 
 	$val = $this->get_ini( _C_WEBPHOTO_NAME_DEBUG_SQL );
@@ -407,7 +407,7 @@ function _import_webphoto()
 
 function _init_webphoto( $src_dirname )
 {
-	$module_class =& webphoto_xoops_module::getInstance();
+	$module_class = webphoto_xoops_module::getInstance();
 	$config_class =& webphoto_inc_config::getSingleton( $src_dirname );
 
 	$mid = $module_class->get_mid_by_dirname( $src_dirname );
@@ -633,14 +633,14 @@ function _print_form_webphotos()
 		'except' => $this->_DIRNAME ,
 	);
 
-	$module_class =& webphoto_xoops_module::getInstance();
+	$module_class = webphoto_xoops_module::getInstance();
 
 	$module_array = $module_class->get_module_list( $param );
 	if ( !is_array($module_array) || !count($module_array) ) {
 		return true;	// no acton
 	}
 
-	$selbox_class =& webphoto_cat_selbox::getInstance();
+	$selbox_class = webphoto_cat_selbox::getInstance();
 
 	foreach ( $module_array as $module ) 
 	{

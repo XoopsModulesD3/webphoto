@@ -23,7 +23,7 @@ class webphoto_lib_mysql_utility
 //---------------------------------------------------------
 function webphoto_lib_mysql_utility()
 {
-	$this->_utility_class =& webphoto_lib_utility::getInstance();
+	$this->_utility_class = webphoto_lib_utility::getInstance();
 }
 
 public static function &getInstance()

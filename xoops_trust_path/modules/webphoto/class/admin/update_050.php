@@ -42,13 +42,13 @@ function webphoto_admin_update_050( $dirname , $trust_dirname )
 	$this->webphoto_base_this( $dirname , $trust_dirname );
 
 	$this->_item_create_class  
-		=& webphoto_edit_item_create::getInstance( $dirname , $trust_dirname  );
+		= webphoto_edit_item_create::getInstance( $dirname , $trust_dirname  );
 
-	$this->_player_handler =& webphoto_player_handler::getInstance( 
+	$this->_player_handler = webphoto_player_handler::getInstance( 
 		$dirname , $trust_dirname );
-	$this->_form_class     =& webphoto_lib_form::getInstance(   
+	$this->_form_class     = webphoto_lib_form::getInstance(   
 		$dirname , $trust_dirname );
-	$this->_mime_class     =& webphoto_mime::getInstance(   
+	$this->_mime_class     = webphoto_mime::getInstance(   
 		$dirname , $trust_dirname );
 
 	$this->_item_create_class->set_debug_error( true );

@@ -49,10 +49,10 @@ function webphoto_photo_submit( $dirname , $trust_dirname )
 {
 	$this->webphoto_imagemanager_submit( $dirname , $trust_dirname );
 
-	$this->_embed_class  =& webphoto_embed::getInstance( $dirname, $trust_dirname );
-	$this->_editor_class =& webphoto_editor::getInstance( $dirname, $trust_dirname );
+	$this->_embed_class  = webphoto_embed::getInstance( $dirname, $trust_dirname );
+	$this->_editor_class = webphoto_editor::getInstance( $dirname, $trust_dirname );
 
-	$this->_tag_class  =& webphoto_tag::getInstance( $dirname );
+	$this->_tag_class  = webphoto_tag::getInstance( $dirname );
 	$this->_tag_class->set_is_japanese( $this->_is_japanese );
 
 	$this->_FLAG_FETCH_ALLOW_ALL = true ;
@@ -544,7 +544,7 @@ function submit_exec_playlist_save( $row )
 // overwrite
 function submit_exec_post_count()
 {
-	$xoops_user_class =& webphoto_xoops_user::getInstance();
+	$xoops_user_class = webphoto_xoops_user::getInstance();
 	$xoops_user_class->increment_post_by_num_own( $this->_cfg_addposts );
 }
 
@@ -556,7 +556,7 @@ function submit_exec_notify( $row )
 	}
 
 // Trigger Notification when supper insert
-	$notification_class =& webphoto_notification_event::getInstance(
+	$notification_class = webphoto_notification_event::getInstance(
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$notification_class->notify_new_photo( 
 		$row['item_id'],  $row['item_cat_id'],  $row['item_title'] );
@@ -756,7 +756,7 @@ function get_playlist_cache_if_empty( $item_row )
 
 function notify_new_photo( $item_row )
 {
-	$notification_class =& webphoto_notification_event::getInstance(
+	$notification_class = webphoto_notification_event::getInstance(
 		$this->_DIRNAME , $this->_TRUST_DIRNAME );
 	$notification_class->notify_new_photo( 
 		$item_row['item_id'],  $item_row['item_cat_id'],  $item_row['item_title'] );

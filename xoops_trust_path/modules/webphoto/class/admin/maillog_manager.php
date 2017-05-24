@@ -58,21 +58,21 @@ function webphoto_admin_maillog_manager( $dirname , $trust_dirname )
 	$this->set_manage_desc( null );
 	$this->set_lang_show_list( _AM_WEBPHOTO_SHOW_LIST );
 
-	$this->_config_class  =& webphoto_config::getInstance( $dirname );
-	$this->_unlink_class  =& webphoto_edit_mail_unlink::getInstance( $dirname );
+	$this->_config_class  = webphoto_config::getInstance( $dirname );
+	$this->_unlink_class  = webphoto_edit_mail_unlink::getInstance( $dirname );
 
 	$this->_item_handler  
-		=& webphoto_item_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_item_handler::getInstance( $dirname , $trust_dirname );
 	$this->_cat_handler   
-		=& webphoto_cat_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_cat_handler::getInstance( $dirname , $trust_dirname );
 	$this->_form_class    
-		=& webphoto_edit_form::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_form::getInstance( $dirname , $trust_dirname );
 
 	$this->_maillog_form_class 
-		=& webphoto_admin_maillog_form::getInstance( $dirname , $trust_dirname );
+		= webphoto_admin_maillog_form::getInstance( $dirname , $trust_dirname );
 
 	$this->_photo_class   
-		=& webphoto_edit_mail_photo::getInstance( $dirname , $trust_dirname );
+		= webphoto_edit_mail_photo::getInstance( $dirname , $trust_dirname );
 
 	$this->_photo_class->set_mail_groups( XOOPS_GROUP_ADMIN );
 	$this->_photo_class->set_msg_level( _C_WEBPHOTO_MSG_LEVEL_ADMIN );

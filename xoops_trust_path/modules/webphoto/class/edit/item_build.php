@@ -63,17 +63,17 @@ function webphoto_edit_item_build( $dirname , $trust_dirname )
 {
 	$this->webphoto_edit_base_create( $dirname , $trust_dirname );
 
-	$this->_xoops_class   =& webphoto_xoops_base::getInstance();
-	$this->_post_class    =& webphoto_lib_post::getInstance();
+	$this->_xoops_class   = webphoto_xoops_base::getInstance();
+	$this->_post_class    = webphoto_lib_post::getInstance();
 
 	$this->_item_handler  
-		=& webphoto_item_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_item_handler::getInstance( $dirname , $trust_dirname );
 	$this->_cat_handler  
-		=& webphoto_cat_handler::getInstance( $dirname , $trust_dirname );
+		= webphoto_cat_handler::getInstance( $dirname , $trust_dirname );
 	$this->_perm_class    
-		=& webphoto_permission::getInstance( $dirname , $trust_dirname );
+		= webphoto_permission::getInstance( $dirname , $trust_dirname );
 	$this->_use_item_class      
-		=& webphoto_edit_use_item::getInstance( $dirname, $trust_dirname );
+		= webphoto_edit_use_item::getInstance( $dirname, $trust_dirname );
 
 	$this->_xoops_uid          = $this->_xoops_class->get_my_user_uid() ;
 	$this->_has_superinsert    = $this->_perm_class->has_superinsert();

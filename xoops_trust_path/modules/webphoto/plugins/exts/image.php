@@ -22,7 +22,7 @@ function webphoto_ext_image( $dirname, $trust_dirname )
 {
 	$this->webphoto_ext_base( $dirname, $trust_dirname );
 
-	$this->_image_create_class =& webphoto_image_create::getInstance( $dirname );
+	$this->_image_create_class = webphoto_image_create::getInstance( $dirname );
 	$this->set_debug_by_name( 'IMAGE' );
 }
 
